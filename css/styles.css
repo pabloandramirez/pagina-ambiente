@@ -4,6 +4,7 @@ body{
 }
 
 .cabecero {
+    position: relative;
     background-color: #31363F;
     display: flex;
     align-items: center; /* Alinea los elementos verticalmente */
@@ -11,13 +12,12 @@ body{
     margin: 0;
     padding: 0px;
     height: 75px;
-    position: relative;
 }
 
 .bandera {
     margin: 150px;
     width: 350px;
-    height: 175px;
+    height: 125px;
     /*background: linear-gradient(to bottom, #1F93BC 0%,#2595D4 33%, white 33%, white 66%, #4BA32A 66%, green 100%);*/
     background: linear-gradient(to right, green 0%, #4BA32A 33%, white 33%, white 66%, #1F93BC 66%,#2595D4 100%);
     position: relative;
@@ -43,16 +43,16 @@ body{
 }
 
 .contenedor{
-    z-index: 50;
+    position: relative;
     width: 100%;
-    height: 100vh; /* O cualquier altura que desees */
+    height: 20vh; /* O cualquier altura que desees */
     background-image: url('fondo-menu.jpg'); /* Ruta de la imagen de fondo */
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
     background-position: center; /* Centra la imagen de fondo */
     background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
     color: white; /* Cambia el color del texto para que sea legible */
     padding-top: 50px; /* Ajusta el espaciado superior para que el texto no esté pegado al borde superior */
-    opacity: 0.5;
+    opacity: 1;
 }
 
 .titulo-y-logo{
@@ -73,4 +73,42 @@ body{
 .titulo_subse p, h2, h3{
     padding: 0;
     margin: 0;
+}
+
+.nav-bar{
+    width: 70%;
+    margin: 0 auto;
+    position: absolute;
+}
+
+.nav-bar {
+    top: 220px; /* Superposición en el div superior */
+    left: 20px; /* Ajuste de la posición izquierda */
+    right: 20px; /* Ajuste de la posición derecha */
+    z-index: 1; /* Asegura que la barra de navegación esté por encima del contenido */
+  }
+
+.items-nav{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #4BA32A;
+    margin: 0;
+    padding: 15px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #fff;
+}
+
+.items-nav a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.items-nav a:hover{
+    color: #5A5A5A;
+}
+
+.item{
+    padding: 0 18px;
 }
