@@ -55,15 +55,15 @@
                 <li class="item">NORMATIVAS</li>
             </a>
             |
-            <a href="/">
+            <a href="#tramites">
                 <li class="item">TRÁMITES</li>
             </a>
             |
-            <a href="/">
+            <a href="#noticias">
                 <li class="item">NOTICIAS</li>
             </a>
             |
-            <a href="/">
+            <a href="#contacto">
                 <li class="item">CONTACTO</li>
             </a>
         </ul>
@@ -300,10 +300,10 @@
     <div class="normativas-container" id="normativas">
         <h1 class="normativas-titulo">NORMATIVAS</h1>
         <p class="normativas-detalle">Podés buscar por número de norma (sin puntos), palabra clave o categoría.</p>
-        <div class="busqueda-normativas-container">
+        <div class="busqueda-container">
             <div class="formularios-container">
                 <div class="categoria-container">
-                    <h3 class="categoria-titulo">CATEGORÍA</h3>
+                    <h3 class="categoria-titulo">CATEGORIA</h3>
                     <select id="select-opciones" class="categoria-input">
                         <option value="todos">Todos</option>
                         <option value="arprobio">Areas Protegidas y Biodiversidad</option>
@@ -313,7 +313,30 @@
                     </select>
                 </div>
                 <form class="palabra-clave-container" action="/buscar-normativas.html" method="get">
-                    <h3 class="palabra-clave-titulo">BUSCÁ POR PALABRA CLAVE</h3>
+                    <h3 class="palabra-clave-titulo">BUSCA POR PALABRA CLAVE</h3>
+                    <input type="hidden" name="categoria" id="input-categoria">
+                    <input class="palabra-clave-input" type="text" placeholder="Palabra" style="font-style: italic;" name="palabra">
+                    <button class="boton-buscar" type="submit">BUSCAR</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="tramites-container" id="tramites">
+        <h1 class="tramites-titulo">TRAMITES</h1>
+        <div class="busqueda-container">
+            <div class="formularios-container">
+                <div class="categoria-container">
+                    <h3 class="categoria-titulo-2">CATEGORIA</h3>
+                    <select id="select-opciones" class="categoria-input">
+                        <option value="todos">Todos</option>
+                        <option value="arprobio">Areas Protegidas y Biodiversidad</option>
+                        <option value="fiscacontamb">Fiscalización y Control Ambiental</option>
+                        <option value="polincentambi">Políticas e Incentivos Ambientales</option>
+                        <option value="tecnamb">Técnicas Ambientales</option>
+                    </select>
+                </div>
+                <form class="palabra-clave-container" action="/buscar-tramites.html" method="get">
+                    <h3 class="palabra-clave-titulo-2">BUSCA POR PALABRA CLAVE</h3>
                     <input type="hidden" name="categoria" id="input-categoria">
                     <input class="palabra-clave-input" type="text" placeholder="Palabra" style="font-style: italic;" name="palabra">
                     <button class="boton-buscar" type="submit">BUSCAR</button>
