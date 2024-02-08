@@ -43,6 +43,10 @@
     </div>
     <nav class="nav-bar">
         <ul class="items-nav">
+            <a href="/">
+                <li class="item">INICIO</li>
+            </a>
+            |
             <a href="#quienes-somos">
                 <li class="item">QUIENES SOMOS</li>
             </a>
@@ -242,7 +246,7 @@
             <a href="/">
                 <div class="card">
                     <div>
-                        <h2 class="titulo-card">RUBH<hr></h2>
+                        <h2 class="titulo-card">Areas Protegidas y Biodiversidad<hr></h2>
                         <p class="descripcion-card">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
                     </div>
                 </div>
@@ -250,7 +254,7 @@
             <a href="/">
                 <div class="card">
                     <div>
-                        <h2 class="titulo-card">Ley 7005<hr></h2>
+                        <h2 class="titulo-card">Fiscalización y Control Ambiental<hr></h2>
                         <p class="descripcion-card">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
                     </div>
                 </div>
@@ -258,7 +262,7 @@
             <a href="/">
                 <div class="card">
                     <div>
-                        <h2 class="titulo-card">Proyecto Nuevo Sur<hr></h2>
+                        <h2 class="titulo-card">Policitas e Incentivos Ambientales<hr></h2>
                         <p class="descripcion-card">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
                     </div>
                 </div>
@@ -266,12 +270,12 @@
             <a href="/">
                 <div class="card">
                     <div>
-                        <h2 class="titulo-card">Banco de Tierras<hr></h2>
+                        <h2 class="titulo-card">Técnicas Ambientales<hr></h2>
                         <p class="descripcion-card">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                     </div>
                 </div>
             </a>
-            <a href="/">
+            <a href="/" class="ocultar">
                 <div class="card">
                     <div>
                         <h2 class="titulo-card">Equipo Habitat<hr></h2>
@@ -279,7 +283,7 @@
                     </div>
                 </div>
             </a>
-            <a href="/">
+            <a href="/" class="ocultar">
                 <div class="card">
                     <div>
                         <h2 class="titulo-card">BOA Brigada Operativa Ambiental<hr></h2>
@@ -308,10 +312,10 @@
                         <option value="tecnamb">Técnicas Ambientales</option>
                     </select>
                 </div>
-                <form class="palabra-clave-container" action="/buscar-normativas/" method="get">
+                <form class="palabra-clave-container" action="/buscar-normativas.html" method="get">
                     <h3 class="palabra-clave-titulo">BUSCÁ POR PALABRA CLAVE</h3>
                     <input type="hidden" name="categoria" id="input-categoria">
-                    <input class="palabra-clave-input" type="text" placeholder="Palabra" style="font-style: italic;" name="palabra" required>
+                    <input class="palabra-clave-input" type="text" placeholder="Palabra" style="font-style: italic;" name="palabra">
                     <button class="boton-buscar" type="submit">BUSCAR</button>
                 </form>
             </div>

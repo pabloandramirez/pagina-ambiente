@@ -14,7 +14,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
 
-document.getElementById('select-opciones').addEventListener('change', function() {
-  var selectedValue = this.value;
-  document.getElementById('input-categoria').value = selectedValue;
+var selectElement = document.getElementById('select-opciones');
+var hiddenInputElement = document.getElementById('input-categoria');
+
+// Establecer el valor predeterminado del campo oculto al valor seleccionado por defecto
+hiddenInputElement.value = selectElement.value;
+
+// Escuchar el evento de cambio en el select
+selectElement.addEventListener('change', function() {
+  hiddenInputElement.value = this.value;
 });

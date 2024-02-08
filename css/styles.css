@@ -155,7 +155,7 @@ button{
     font-size: 100%;
     font-family: Arial, Helvetica, sans-serif;
     color: antiquewhite;
-    margin: 30px 0 0 30px;
+    margin: 20px 10px 0 20px;
 }
 
 
@@ -172,7 +172,7 @@ button{
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
     color: antiquewhite;
-    margin: 0px 10px 10px 30px;
+    margin: 0px 10px 10px 20px;
 }
 
 
@@ -293,4 +293,8 @@ button{
 
 .boton-buscar:hover{
     background-color: #37801c;
+}
+
+.ocultar{
+    display: none;
 }
