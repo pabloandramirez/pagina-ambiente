@@ -116,6 +116,15 @@ button{
     cursor: pointer;
 }
 
+.contenido-lista-cards{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .card-container{
     position: relative;
     width: 100%;
@@ -127,15 +136,6 @@ button{
     color: white; /* Cambia el color del texto para que sea legible */
     padding-top: 50px; /* Ajusta el espaciado superior para que el texto no esté pegado al borde superior */
     opacity: 1;
-}
-
-.contenido-lista-cards{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .contenido-lista-cards a{
@@ -193,7 +193,7 @@ button{
 .quienes-somos-titulo{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    margin: 75px 0;
+    margin: 50px 0;
 }
 
 .quienes-somos-detalle{
@@ -202,4 +202,95 @@ button{
     margin: 0 150px;
     font-size: 150%;
     line-height: 2;
+}
+
+.normativas-container{
+    position: relative;
+    width: 100%;
+    height: 500px; /* O cualquier altura que desees */
+    background-color: #5BAB3D;
+    color: white; /* Cambia el color del texto para que sea legible */
+    padding-top: 50px; /* Ajusta el espaciado superior para que el texto no esté pegado al borde superior */
+}
+
+.normativas-titulo{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.normativas-detalle{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    margin: 0 150px;
+    font-size: 125%;
+    line-height: 2;
+}
+
+.busqueda-normativas-container{
+    margin: 30px 150px;
+}
+
+.formularios-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.categoria-titulo{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    margin: 25px 0px;
+    font-size: 125%;
+    line-height: 2;
+}
+.categoria-input {
+    width: 150px; /* Ancho del input */
+    height: 40px; /* Altura del input */
+    border: 2px solid #ccc; /* Grosor y color del borde */
+    border-radius: 20px; /* Radio de borde para hacerlo redondeado */
+    padding: 5px; /* Espacio entre el borde y el contenido del input */
+    font-size: 16px; /* Tamaño de la fuente dentro del input */
+    margin-right: 50px;
+}
+  
+.categoria-input:focus {
+    outline: none; /* Elimina el contorno al enfocar el input */
+    border-color: #31363F; /* Cambia el color del borde al enfocar el input */
+}
+
+.palabra-clave-titulo{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    margin: 25px 0px;
+    font-size: 125%;
+    line-height: 2;
+}
+
+.palabra-clave-input{
+    width: 300px; /* Ancho del input */
+    height: 40px; /* Altura del input */
+    border: 2px solid #ccc; /* Grosor y color del borde */
+    border-radius: 20px; /* Radio de borde para hacerlo redondeado */
+    font-size: 16px; /* Tamaño de la fuente dentro del input */
+    padding: 0 0 0 15px;
+}
+
+.palabra-clave-input:focus {
+    outline: none; /* Elimina el contorno al enfocar el input */
+    border-color: #31363F; /* Cambia el color del borde al enfocar el input */
+}
+
+.boton-buscar{
+    margin: 100px 15px;
+    width: 150px; /* Ancho del input */
+    height: 30px; /* Altura del input */
+    border: 2px solid #ccc; /* Grosor y color del borde */
+    border-radius: 20px; /* Radio de borde para hacerlo redondeado */
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.boton-buscar:hover{
+    background-color: #37801c;
 }
