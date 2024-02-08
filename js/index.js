@@ -13,3 +13,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       }
     });
   });
+
+document.getElementById('select-opciones').addEventListener('change', function() {
+  var selectedValue = this.value;
+  document.getElementById('input-categoria').value = selectedValue;
+});

@@ -281,7 +281,7 @@ button{
 }
 
 .boton-buscar{
-    margin: 100px 15px;
+    margin-left: 20px;
     width: 150px; /* Ancho del input */
     height: 30px; /* Altura del input */
     border: 2px solid #ccc; /* Grosor y color del borde */
