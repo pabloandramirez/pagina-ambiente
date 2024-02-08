@@ -65,7 +65,6 @@ body{
 }
 
 .titulo_subse{
-    padding: 0;
     margin: 0;
     color: #5A5A5A;
 }
@@ -164,21 +163,7 @@ button{
     height: 2px; /* Altura de la regla horizontal */
     border: none; /* Elimina el borde */
     background-color: antiquewhite; /* Color de la regla horizontal */
-    margin: 15px 0 10px; /* Márgenes superior e inferior */
-    width: 25%;
-}
-
-.titulo-card-inferior{
-    font-family: Arial, Helvetica, sans-serif;
-    color: antiquewhite;
-    margin: 0px 0 0 30px;
-}
-
-.titulo-card-inferior hr{
-    height: 2px; /* Altura de la regla horizontal */
-    border: none; /* Elimina el borde */
-    background-color: antiquewhite; /* Color de la regla horizontal */
-    margin: 15px 0 10px; /* Márgenes superior e inferior */
+    margin: 10px 0 5px; /* Márgenes superior e inferior */
     width: 25%;
 }
 
@@ -196,3 +181,25 @@ button{
     background-color: #4BA32A;
 }
 
+.quienes-somos-container{
+    position: relative;
+    width: 100%;
+    height: 700px; /* O cualquier altura que desees */
+    background-color: #208AB0;
+    color: white; /* Cambia el color del texto para que sea legible */
+    padding-top: 50px; /* Ajusta el espaciado superior para que el texto no esté pegado al borde superior */
+}
+
+.quienes-somos-titulo{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 75px 0;
+}
+
+.quienes-somos-detalle{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0 150px;
+    font-size: 150%;
+    line-height: 2;
+}
