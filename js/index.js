@@ -24,3 +24,14 @@ hiddenInputElement.value = selectElement.value;
 selectElement.addEventListener('change', function() {
   hiddenInputElement.value = this.value;
 });
+
+var selectElement2 = document.getElementById('select-opciones-2');
+var hiddenInputElement2 = document.getElementById('input-categoria-2');
+
+// Establecer el valor predeterminado del campo oculto al valor seleccionado por defecto
+hiddenInputElement2.value = selectElement2.value;
+
+// Escuchar el evento de cambio en el select
+selectElement2.addEventListener('change', function() {
+  hiddenInputElement2.value = this.value;
+});
