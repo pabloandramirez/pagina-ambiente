@@ -343,6 +343,7 @@ button{
     width: 100%;
     height: 240px;
     padding: 0;
+    margin: 0;
     z-index: 0;
     display: flex;
     align-items: center;
@@ -380,6 +381,7 @@ button{
 .voluntariado-descripcion{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 15px 0;
+    font-weight: bold;
 }
 
 .voluntariado-boton{
@@ -400,4 +402,38 @@ button{
 .voluntariado-boton:hover{
     background-color: #37801c;
     color: #fff;
+}
+
+.noticias-container{
+    background: #F7C64D;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    height: 500px; /* O cualquier altura que desees */
+    padding-top: 50px;
+}
+
+.noticia-imagen{
+    width: 70%;
+}
+
+.noticias-titulo{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 25px 0;
+    color: #31363F;
+}
+
+.noticias-card-noticias{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px;
+    list-style: none;
+    justify-content: center;
+}
+
+.noticia-card{
+    width: 20%;
+    height: 50%;
 }
