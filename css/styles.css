@@ -45,7 +45,7 @@ body{
 .contenedor{
     position: relative;
     width: 100%;
-    height: 20vh; /* O cualquier altura que desees */
+    padding: 50px 0;
     background-image: url('fondo-menu.jpg'); /* Ruta de la imagen de fondo */
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
     background-position: center; /* Centra la imagen de fondo */
@@ -128,7 +128,7 @@ button{
 .card-container{
     position: relative;
     width: 100%;
-    height: 240px; /* O cualquier altura que desees */
+    padding: 50px 0;
     background-image: url('fondo-menu.jpg'); /* Ruta de la imagen de fondo */
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
     background-position: center; /* Centra la imagen de fondo */
@@ -184,10 +184,9 @@ button{
 .quienes-somos-container{
     position: relative;
     width: 100%;
-    height: 700px; /* O cualquier altura que desees */
     background-color: #208AB0;
     color: white; /* Cambia el color del texto para que sea legible */
-    padding-top: 50px; /* Ajusta el espaciado superior para que el texto no esté pegado al borde superior */
+    padding: 50px 0; /* Ajusta el espaciado superior para que el texto no esté pegado al borde superior */
 }
 
 .quienes-somos-titulo{
@@ -210,7 +209,7 @@ button{
     height: 500px; /* O cualquier altura que desees */
     background-color: #5BAB3D;
     color: white; /* Cambia el color del texto para que sea legible */
-    padding-top: 50px; /* Ajusta el espaciado superior para que el texto no esté pegado al borde superior */
+    padding: 50px 0; /* Ajusta el espaciado superior para que el texto no esté pegado al borde superior */
 }
 
 .normativas-titulo{
@@ -301,6 +300,7 @@ button{
 }
 
 .tramites-container{
+    padding: 50px 0;
     position: relative;
     width: 100%;
     height: 290px; /* O cualquier altura que desees */
@@ -411,7 +411,7 @@ button{
     position: relative;
     width: 100%;
     height: 600px; /* O cualquier altura que desees */
-    padding-top: 50px;
+    padding: 50px 0;
 }
 
 .noticias-titulo{
@@ -441,4 +441,81 @@ button{
 .noticia-imagen{
     justify-self: center;
     width: 70%;
+}
+
+.contacto-container{
+    background: #31363F;
+    padding: 50px 0;
+    margin: 0;
+}
+
+.contacto-titulo{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 25px 0;
+    color: #fff;
+}
+
+.contacto-formulario-container{
+    margin: 50px;
+}
+
+.asunto-input{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    font-size: 100%;
+    font-weight: bold;
+}
+
+/* Ocultar las flechas de incremento y decremento en campos de tipo number */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield; /* Firefox */
+}
+
+.contacto-datos-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacto-datos{
+    margin: 20px 0;
+    width: 28%;
+    padding: 15px;
+    font-size: 100%;
+    font-weight: bold;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.mensaje-input{
+    width: 100%;
+    height: 35vh;
+    padding: 15px;
+    font-size: 100%;
+    font-weight: bold;
+    box-sizing: border-box;
+    resize: none; /* Evita que el textarea sea redimensionable */
+    overflow-y: auto; /* Añade barra de desplazamiento vertical si es necesario */
+}
+
+.mensaje-input::placeholder{
+    position: absolute;
+    top: 15px; /* Ajusta según la posición deseada */
+    left: 15px; /* Ajusta según la posición deseada */
+}
+
+.mensaje-input:focus + .placeholder {
+    display: none; /* Oculta el placeholder cuando el input está enfocado */
 }

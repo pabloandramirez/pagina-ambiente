@@ -436,8 +436,24 @@
             </ul>
         </div>
     </div>
-    <div class="contacto-container">
-
+    <div class="contacto-container" id="contacto">
+        <h1 class="contacto-titulo">CONTACTO</h1>
+        <form class="contacto-formulario-container" action="index.html" method="post">
+            <input class="asunto-input" type="text" placeholder="ASUNTO" name="asunto" maxlength="50">
+            <div class="contacto-datos-container">
+                <input class="nombre-apellido-input contacto-datos" type="text" placeholder="NOMBRE Y APELLIDO" 
+                name="nombre-apellido" maxlength="25">
+                <input class="email-input contacto-datos" type="email" placeholder="E-MAIL" name="email" 
+                maxlength="25">
+                <input class="telefono-input contacto-datos" type="number" placeholder="TELEFONO" name="telefono"
+                id="telefono">
+            </div>
+            <div class="input-wrapper">
+                <textarea class="mensaje-input" name="mensaje" id="mensaje-contenido" rows="1" 
+                placeholder="MENSAJE"></textarea>
+            </div>
+            <button class="boton-enviar" type="submit">ENVIAR</button>
+        </form>
     </div>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/index.js"></script>

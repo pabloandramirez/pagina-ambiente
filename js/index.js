@@ -35,3 +35,26 @@ hiddenInputElement2.value = selectElement2.value;
 selectElement2.addEventListener('change', function() {
   hiddenInputElement2.value = this.value;
 });
+
+var inputTelefono = document.getElementById('telefono');
+    inputTelefono.addEventListener('input', function() {
+        if (inputTelefono.value.length > 13) {
+            inputTelefono.value = inputTelefono.value.slice(0, 13); // Limitar la entrada a 13 caracteres
+        }
+    });
+
+const input = document.getElementById("mensaje-contenido");
+const placeholder = document.getElementById("placeholder");
+
+input.addEventListener("input", function() {
+    const inputValue = this.value;
+    const cursorPosition = this.selectionStart;
+    
+    const beforeCursor = inputValue.substring(0, cursorPosition);
+    const afterCursor = inputValue.substring(cursorPosition);
+    
+    placeholder.textContent = beforeCursor; // Alinea el placeholder con el texto antes del cursor
+    
+    // Mueve el cursor al principio del campo de entrada
+    this.setSelectionRange(0, 0);
+});
