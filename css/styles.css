@@ -410,12 +410,8 @@ button{
     margin: 0;
     position: relative;
     width: 100%;
-    height: 500px; /* O cualquier altura que desees */
+    height: 600px; /* O cualquier altura que desees */
     padding-top: 50px;
-}
-
-.noticia-imagen{
-    width: 70%;
 }
 
 .noticias-titulo{
@@ -434,6 +430,15 @@ button{
 }
 
 .noticia-card{
+    display: grid;
     width: 20%;
     height: 50%;
+    background-color:#fff;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.noticia-imagen{
+    justify-self: center;
+    width: 70%;
 }
