@@ -5858,3 +5858,13 @@
   }
 }
 /*# sourceMappingURL=bootstrap.min.css.map */
+
+
+@media (max-width:768px){
+
+  .bd-placeholder-img{
+    height: 100%;
+  }
+
+
+}

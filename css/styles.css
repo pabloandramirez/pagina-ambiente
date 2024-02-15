@@ -36,6 +36,10 @@ body{
     margin-right: 10px; /* Añade un margen a la derecha de los enlaces */
 }
 
+#nav-bar-mobile{
+    display: none;
+}
+
 .contacto{
     display: flex;
     align-items: center;
@@ -87,7 +91,7 @@ body{
 .barra-fija{
     position: fixed; /* Lo hacemos fijo para que se mantenga en la parte superior */
     top: 0; /* Colocamos la barra en la parte superior */
-    width: 100%; /* Ancho completo */
+    width: 77%; /* Ancho completo */
 }
 
 .items-nav{
@@ -137,7 +141,6 @@ button{
     background-position: center; /* Centra la imagen de fondo */
     background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
     color: white; /* Cambia el color del texto para que sea legible */
-    padding-top: 50px; /* Ajusta el espaciado superior para que el texto no esté pegado al borde superior */
     opacity: 1;
 }
 
@@ -150,7 +153,7 @@ button{
     border-radius: 10px;
     width: 170px;
     height: 200px;
-    margin: 0 5px;
+    margin: 5px 5px;
     background-color: #31363F;
 }
 
@@ -306,13 +309,11 @@ button{
     padding: 50px 0;
     position: relative;
     width: 100%;
-    height: 290px; /* O cualquier altura que desees */
     background-image: url('fondo-menu.jpg'); /* Ruta de la imagen de fondo */
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
     background-position: center; /* Centra la imagen de fondo */
     background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
     color: white; /* Cambia el color del texto para que sea legible */
-    padding-top: 50px; /* Ajusta el espaciado superior para que el texto no esté pegado al borde superior */
     opacity: 1;
 }
 
@@ -413,7 +414,6 @@ button{
     margin: 0;
     position: relative;
     width: 100%;
-    height: 600px; /* O cualquier altura que desees */
     padding: 50px 0;
 }
 
@@ -424,9 +424,14 @@ button{
     color: #31363F;
 }
 
-.noticias-card-noticias{
+.noticias-flexibles{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+}
+
+.noticias-card-noticias{
+    display: contents;
     margin: 50px;
     list-style: none;
     justify-content: center;
@@ -434,11 +439,11 @@ button{
 
 .noticia-card{
     display: grid;
-    width: 20%;
-    height: 50%;
+    width: 170px;
+    height: 100%;
     background-color:#fff;
     padding: 10px;
-    margin: 0 10px;
+    margin: 10px 10px;
 }
 
 .noticia-imagen{
@@ -543,4 +548,100 @@ input[type=number] {
 .boton-enviar:hover{
     background-color: #37801c;
     color: #fff;
+}
+
+.separador{
+    font-size: 300%;
+    color: #5BAB3D;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.footer-container{
+    padding: 50px 0;
+    background-color: #5A5A5A;
+}
+
+@media (max-width:768px){
+
+    .bandera{
+        display: none;
+    }
+
+    .contacto{
+        margin: 0 40px;
+    }
+
+    .quienes-somos-titulo{
+        margin: 0 0 50px 0;
+    }
+
+    .quienes-somos-detalle{
+        margin: 0 30px;
+        text-align: justify;
+    }
+
+    .normativas-titulo{
+        margin: 0 0 50px 0;
+    }
+
+    .normativas-detalle{
+        margin: 0 30px;
+        text-align: justify;
+    }
+
+    .busqueda-container{
+        margin: 0 30px;
+    }
+
+    .categoria-titulo{
+        margin: 7px 0;
+    }
+
+    .palabra-clave-titulo{
+        margin: 7px 0;
+    }
+
+    .palabra-clave-input{
+        width: auto;
+    }
+
+    .boton-buscar{
+        margin: 25px;
+    }
+
+    .tramites-titulo{
+        margin: 0 0 50px 0;
+    }
+
+    .categoria-titulo-2{
+        margin: 7px 0;
+    }
+
+    .palabra-clave-titulo-2{
+        margin: 7px 0;
+    }
+
+    .voluntariado-imagen{
+        display: none;
+    }
+
+    .voluntariado-titulo{
+        margin-top: 10px;
+    }
+
+    .voluntariado-descripcion{
+        margin: 0;
+    }
+
+    .contacto-datos-container{
+        display: contents;
+    }
+
+    .contacto-datos {
+        margin: 5px 0;
+        width: auto;
+    }
 }
