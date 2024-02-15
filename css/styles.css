@@ -15,7 +15,7 @@ body{
 }
 
 .bandera {
-    margin: 150px;
+    margin: 0 0 0 150px;
     width: 350px;
     height: 125px;
     /*background: linear-gradient(to bottom, #1F93BC 0%,#2595D4 33%, white 33%, white 66%, #4BA32A 66%, green 100%);*/
@@ -74,18 +74,21 @@ body{
     margin: 0;
 }
 
-.nav-bar{
+#nav-bar{
     width: 77%;
     margin: 0 auto;
     position: absolute;
-}
-
-.nav-bar {
     top: 220px; /* Superposición en el div superior */
     left: 20px; /* Ajuste de la posición izquierda */
     right: 20px; /* Ajuste de la posición derecha */
     z-index: 1; /* Asegura que la barra de navegación esté por encima del contenido */
-  }
+}
+
+.barra-fija{
+    position: fixed; /* Lo hacemos fijo para que se mantenga en la parte superior */
+    top: 0; /* Colocamos la barra en la parte superior */
+    width: 100%; /* Ancho completo */
+}
 
 .items-nav{
     list-style: none;
@@ -458,6 +461,7 @@ button{
 
 .contacto-formulario-container{
     margin: 50px;
+    display: grid;
 }
 
 .asunto-input{
@@ -518,4 +522,25 @@ input[type=number] {
 
 .mensaje-input:focus + .placeholder {
     display: none; /* Oculta el placeholder cuando el input está enfocado */
+}
+
+.boton-enviar{
+    color: #417437;
+    margin-top: 20px;
+    width: 180px; /* Ancho del input */
+    height: 40px; /* Altura del input */
+    line-height: 20px;
+    background-color: #BFD730;
+    background-size: cover;
+    display: block;
+    justify-self: center;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    text-decoration: none;
+}
+
+.boton-enviar:hover{
+    background-color: #37801c;
+    color: #fff;
 }

@@ -58,3 +58,16 @@ input.addEventListener("input", function() {
     // Mueve el cursor al principio del campo de entrada
     this.setSelectionRange(0, 0);
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  window.addEventListener("scroll", function() {
+      var barraNavegacion = document.getElementById("nav-bar");
+      var distanciaDesdeArriba = barraNavegacion.offsetTop;
+
+      if (window.scrollY > distanciaDesdeArriba) {
+          barraNavegacion.classList.add("barra-fija");
+      } else {
+          barraNavegacion.classList.remove("barra-fija");
+      }
+  });
+});
