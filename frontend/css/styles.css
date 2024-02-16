@@ -439,7 +439,7 @@ button{
 
 .noticia-card{
     display: grid;
-    width: 170px;
+    width: 250px;
     height: 100%;
     background-color:#fff;
     padding: 10px;
@@ -449,6 +449,28 @@ button{
 .noticia-imagen{
     justify-self: center;
     width: 70%;
+}
+
+.boton-ver-mas{
+    color: #fff;
+    margin: 20px auto;
+    width: 180px; /* Ancho del input */
+    height: 40px; /* Altura del input */
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    border-style: none;
+}
+
+.boton-ver-mas:hover{
+    color: #000000;
+    background-color: #fff;
 }
 
 .contacto-container{
@@ -543,6 +565,7 @@ input[type=number] {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     text-decoration: none;
+    border-style: none;
 }
 
 .boton-enviar:hover{
@@ -633,6 +656,7 @@ input[type=number] {
 
     .items-nav li:last-child {
         margin-right: 0; /* Elimina el margen derecho del último elemento */
+        line-height: 3;
     }
 
     .quienes-somos-titulo{
@@ -703,8 +727,16 @@ input[type=number] {
         display: contents;
     }
 
+    .asunto-input{
+        margin: 5px 0;
+    }
+
     .contacto-datos {
         margin: 5px 0;
         width: auto;
+    }
+
+    .mensaje-input{
+        margin-top: 5px;
     }
 }
