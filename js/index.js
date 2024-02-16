@@ -6,10 +6,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       const targetElement = document.getElementById(targetId);
 
       if (targetElement) {
+        const offset = 75; // Desplazamiento de 75px hacia arriba
         window.scrollTo({
-          top: targetElement.offsetTop, // Posición de desplazamiento
+          top: targetElement.offsetTop - offset, // Posición de desplazamiento
           behavior: 'smooth' // Desplazamiento suave
         });
+
+        document.getElementById('items-nav').className = 'items-nav';
       }
     });
   });
@@ -69,5 +72,15 @@ document.addEventListener("DOMContentLoaded", function() {
       } else {
           barraNavegacion.classList.remove("barra-fija");
       }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var menuIcon = document.querySelector(".menu-icon");
+  var itemsNav = document.querySelector(".items-nav");
+
+  menuIcon.addEventListener("click", function() {
+      itemsNav.classList.toggle("active");
   });
 });

@@ -566,12 +566,73 @@ input[type=number] {
 
 @media (max-width:768px){
 
-    .bandera{
+    .cabecero a{
+        margin-left: 10px;
+    }
+    
+    .transparencia{
         display: none;
     }
 
     .contacto{
-        margin: 0 40px;
+        background-color: #31363F;
+        position: fixed; 
+        width: 100%;
+        z-index: 20;  
+        margin: 0;
+    }
+
+    #nav-bar{
+        display: none;
+    }
+
+    #nav-bar-mobile {
+        display: flex;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 75px;
+        height: 75px;
+        background-color:#BFD730;;
+        color: #31363F;
+        z-index: 5;
+    }
+    
+    .menu-icon {
+        display: flex;
+        align-self: center;
+        padding: 10px;
+        cursor: pointer;
+        font-size: xx-large;
+    }
+    
+    .items-nav {
+        margin: 0;
+        padding: 0;
+        display: none;
+    }
+    
+    .items-nav.active {
+        display: inline-table;
+    }
+    
+    .items-nav li {
+        display: inline-block;
+        margin-right: 20px;
+        line-height: 100px;
+    }
+    
+    .items-nav li a {
+        display: inline-block;
+        padding: 10px;
+        text-decoration: none;
+        color: white;
+        height: 100%; /* Ajusta la altura de los elementos de navegación */
+        vertical-align: middle; /* Centra verticalmente el texto */
+    }
+
+    .items-nav li:last-child {
+        margin-right: 0; /* Elimina el margen derecho del último elemento */
     }
 
     .quienes-somos-titulo{
@@ -581,6 +642,8 @@ input[type=number] {
     .quienes-somos-detalle{
         margin: 0 30px;
         text-align: justify;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 125%;
     }
 
     .normativas-titulo{
