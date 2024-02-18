@@ -7,6 +7,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
       if (targetElement) {
         const offset = 75; // Desplazamiento de 75px hacia arriba
+        
+        
         window.scrollTo({
           top: targetElement.offsetTop - offset, // Posición de desplazamiento
           behavior: 'smooth' // Desplazamiento suave
