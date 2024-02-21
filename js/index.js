@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded", function() {
           const { titulo, subtitulo, contenido } = result;
           
           // Obtener los elementos HTML por clase o id
-          const titleElement = document.querySelector(`.noticia-titulo-${index + 1}`);
-          const subtitleElement = document.querySelector(`.noticia-subtitulo-${index + 1}`);
-          const contentElement = document.querySelector(`.noticia-resumen-${index + 1}`);
+          const titleElement = document.querySelector(`#noticia-titulo-${index + 1}`);
+          const subtitleElement = document.querySelector(`#noticia-subtitulo-${index + 1}`);
+          const contentElement = document.querySelector(`#noticia-resumen-${index + 1}`);
 
           // Actualizar el contenido de los elementos
           titleElement.textContent = titulo;

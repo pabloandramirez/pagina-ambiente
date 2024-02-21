@@ -437,6 +437,12 @@ button{
     justify-content: center;
 }
 
+.enlace-noticia{
+    text-decoration: none;
+    display: grid;
+}
+
+
 .noticia-card{
     display: grid;
     width: 250px;
@@ -446,9 +452,25 @@ button{
     margin: 10px 10px;
 }
 
+.noticia-card:hover{
+    background-color: #4BA32A;
+}
+
 .noticia-imagen{
     justify-self: center;
     width: 70%;
+}
+
+.noticia-titulo{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 25px 0;
+    color: #31363F;
+}
+
+.noticia-subtitulo{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 
 .boton-ver-mas{
