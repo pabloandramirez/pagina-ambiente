@@ -1,3 +1,31 @@
+document.addEventListener("DOMContentLoaded", function() {
+  fetch('http://127.0.0.1:8080/noticia/')
+  .then(response => response.json())
+  .then(data => {
+      // Filtrar los primeros 4 resultados
+      const primerosResultados = data.slice(0, 4);
+
+      // Actualizar los elementos HTML con los resultados
+      primerosResultados.forEach((result, index) => {
+          const { titulo, subtitulo, contenido } = result;
+          
+          // Obtener los elementos HTML por clase o id
+          const titleElement = document.querySelector(`.noticia-titulo-${index + 1}`);
+          const subtitleElement = document.querySelector(`.noticia-subtitulo-${index + 1}`);
+          const contentElement = document.querySelector(`.noticia-resumen-${index + 1}`);
+
+          // Actualizar el contenido de los elementos
+          titleElement.textContent = titulo;
+          subtitleElement.textContent = subtitulo;
+          contentElement.textContent = contenido;
+      });
+  })
+  .catch(error => {
+      console.error('Hubo un error al obtener los datos:', error);
+  });
+});
+
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();
@@ -6,9 +34,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       const targetElement = document.getElementById(targetId);
 
       if (targetElement) {
-        const offset = 75; // Desplazamiento de 75px hacia arriba
+        let offset = 0 // Desplazamiento de 75px hacia arriba
         
-        
+        if(window.innerWidth <= 768){
+          offset += 75;
+        }
         window.scrollTo({
           top: targetElement.offsetTop - offset, // Posición de desplazamiento
           behavior: 'smooth' // Desplazamiento suave
@@ -86,3 +116,5 @@ document.addEventListener("DOMContentLoaded", function() {
       itemsNav.classList.toggle("active");
   });
 });
+
+
