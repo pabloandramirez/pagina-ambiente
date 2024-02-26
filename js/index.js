@@ -7,12 +7,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
       // Actualizar los elementos HTML con los resultados
       primerosResultados.forEach((result, index) => {
-          var { titulo, subtitulo, contenido, identificador } = result;
+          var { titulo, subtitulo, contenido, identificador, imagenesUrl} = result;
+          
           
           // Obtener los elementos HTML por clase o id
           const titleElement = document.querySelector(`#noticia-titulo-${index + 1}`);
           const subtitleElement = document.querySelector(`#noticia-subtitulo-${index + 1}`);
           const contentElement = document.querySelector(`#noticia-resumen-${index + 1}`);
+          const enlaceNoticiaElement = document.querySelector(`#enlace-noticia-${index + 1}`);
+          const enlaceFacebookElement = document.querySelector(`#enlace-facebook-${index + 1}`);
+          const enlaceXElement = document.querySelector(`#enlace-x-${index + 1}`);
+          const enlaceImagen = document.querySelector(`#imagen-noticia-${index + 1}`);
 
           const limiteCaracteres = 75;
           if (contenido.length > limiteCaracteres) {
@@ -23,13 +28,20 @@ document.addEventListener("DOMContentLoaded", function() {
           titleElement.textContent = titulo;
           subtitleElement.textContent = subtitulo;
           contentElement.textContent = contenido;
-          document.querySelector(`#enlace-noticia-${index + 1}`).setAttribute('href',  
-          '/noticia.html?id=' + identificador);
-          document.querySelector(`#enlace-facebook-${index + 1}`).setAttribute('href', 
+          enlaceNoticiaElement.setAttribute('href','/noticia.html?id=' + identificador);
+          enlaceFacebookElement.setAttribute('href', 
           'https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:5500/noticia.html?id=' + 
           identificador);
-          document.querySelector(`#enlace-x-${index + 1}`).setAttribute('href', 
-          `https://twitter.com/intent/tweet?url=http://127.0.0.1:5500/noticia.html?id=${identificador}&text=Lee%20esta%20noticia%20sobre%20ambiente%20interesante!`);
+          enlaceXElement.setAttribute('href', 
+          `https://twitter.com/intent/tweet?url=http://127.0.0.1:5500/noticia.html?id=${identificador}&text=Lee%20esta%20noticia%20interesante%20sobre%20ambiente!`);
+
+
+          //Obtener solo la primera imagen
+          if(imagenesUrl != null){
+            const primeraImagen = imagenesUrl.slice(3,4);
+            enlaceImagen.setAttribute('href', primeraImagen);
+          }
+
       });
   })
   .catch(error => {
@@ -129,3 +141,28 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+//Get the button
+let mybutton = document.getElementById("btn-back-to-top");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 20
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
