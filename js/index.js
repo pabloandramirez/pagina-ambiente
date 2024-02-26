@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
   // Obtener el enlace de Facebook
-  var enlacesFacebook = document.querySelectorAll('enlace-facebook');
+  var enlacesFacebook = document.querySelectorAll('.enlace-facebook');
 
   enlacesFacebook.forEach(function(enlaceFacebook) {
       enlaceFacebook.addEventListener('click', function(event) {
@@ -69,6 +69,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Construir la URL completa con el id de la noticia
         var urlCompleta = 'https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:5500/noticia.html?id=' + idNoticia;
+
+        enlaceFacebook.setAttribute('href', urlCompleta);
 
         // Abrir la ventana de compartir de Facebook en una nueva pestaña
         window.open(urlCompleta, '_blank');
