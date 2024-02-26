@@ -464,13 +464,14 @@ button{
 .noticia-titulo{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    margin: 25px 0;
+    margin: 10px 0;
     color: #31363F;
 }
 
 .noticia-subtitulo{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    font-size: medium;
 }
 
 .boton-ver-mas{

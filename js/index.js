@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
           const subtitleElement = document.querySelector(`#noticia-subtitulo-${index + 1}`);
           const contentElement = document.querySelector(`#noticia-resumen-${index + 1}`);
 
-          const limiteCaracteres = 50;
+          const limiteCaracteres = 75;
           if (contenido.length > limiteCaracteres) {
             contenido = contenido.substring(0, limiteCaracteres) + '...Ver más'; // Agregar puntos suspensivos
           }
@@ -23,61 +23,19 @@ document.addEventListener("DOMContentLoaded", function() {
           titleElement.textContent = titulo;
           subtitleElement.textContent = subtitulo;
           contentElement.textContent = contenido;
-          document.querySelector(`#enlace-noticia-${index + 1}`).setAttribute('data-id', identificador);
-          document.querySelector(`#enlace-facebook-${index + 1}`).setAttribute('data-id', identificador);
-          document.querySelector(`#enlace-instagram-${index + 1}`).setAttribute('data-id', identificador);
+          document.querySelector(`#enlace-noticia-${index + 1}`).setAttribute('href',  
+          '/noticia.html?id=' + identificador);
+          document.querySelector(`#enlace-facebook-${index + 1}`).setAttribute('href', 
+          'https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:5500/noticia.html?id=' + 
+          identificador);
+          document.querySelector(`#enlace-x-${index + 1}`).setAttribute('href', 
+          `https://twitter.com/intent/tweet?url=http://127.0.0.1:5500/noticia.html?id=${identificador}&text=Lee%20esta%20noticia%20sobre%20ambiente%20interesante!`);
       });
   })
   .catch(error => {
       console.error('Hubo un error al obtener los datos:', error);
   });
 });
-
-document.addEventListener('DOMContentLoaded', function() {
-  // Obtener todos los enlaces de noticias
-  var enlacesNoticias = document.querySelectorAll('.enlace-noticia');
-
-  // Agregar un evento de clic a cada enlace
-  enlacesNoticias.forEach(function(enlace) {
-      enlace.addEventListener('click', function(event) {
-          // Prevenir el comportamiento predeterminado del enlace para evitar que se produzca la navegación
-          event.preventDefault();
-
-          // Obtener el identificador de la noticia desde el atributo data-id
-          var idNoticia = enlace.getAttribute('data-id');
-
-          // Construir la URL de la página de la noticia con el identificador como parámetro
-          var urlPaginaNoticia = '/noticia.html?id=' + idNoticia;
-
-          // Redirigir al usuario a la página de detalles de la noticia
-          window.location.href = urlPaginaNoticia;
-      });
-  });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-  // Obtener el enlace de Facebook
-  var enlacesFacebook = document.querySelectorAll('.enlace-facebook');
-
-  enlacesFacebook.forEach(function(enlaceFacebook) {
-      enlaceFacebook.addEventListener('click', function(event) {
-        // Prevenir el comportamiento predeterminado del enlace para evitar que se produzca la navegación
-        event.preventDefault();
-
-        // Obtener el id de la noticia desde el atributo data-id
-        var idNoticia = enlaceFacebook.getAttribute('data-id');
-
-        // Construir la URL completa con el id de la noticia
-        var urlCompleta = 'https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:5500/noticia.html?id=' + idNoticia;
-
-        enlaceFacebook.setAttribute('href', urlCompleta);
-
-        // Abrir la ventana de compartir de Facebook en una nueva pestaña
-        window.open(urlCompleta, '_blank');
-    });
-  });
-});
-
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {

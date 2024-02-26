@@ -1,0 +1,222 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.cabecero {
+    position: relative;
+    background-color: #31363F;
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente */
+    justify-content: space-between; /* Alinea los elementos a la derecha */
+    margin: 0;
+    padding: 0px;
+    height: 75px;
+}
+
+.bandera {
+    margin: 0 0 0 150px;
+    width: 350px;
+    height: 125px;
+    /*background: linear-gradient(to bottom, #1F93BC 0%,#2595D4 33%, white 33%, white 66%, #4BA32A 66%, green 100%);*/
+    background: linear-gradient(to right, green 0%, #4BA32A 33%, white 33%, white 66%, #1F93BC 66%,#2595D4 100%);
+    position: relative;
+    left: 0; /* Posiciona la bandera a la izquierda del header */
+    top: 0; /* Alinea la bandera al inicio del header */
+    /*transform: rotate(90deg); /* Rota la bandera 90 grados */
+}
+
+
+.cabecero p {
+    color: #fff;
+    margin: 0 15px; /* Añade un margen a la derecha del párrafo */
+}
+
+.cabecero a {
+    margin-right: 10px; /* Añade un margen a la derecha de los enlaces */
+}
+
+#nav-bar-mobile{
+    display: none;
+}
+
+.contacto{
+    display: flex;
+    align-items: center;
+    margin: 0 70px;
+}
+
+.contenedor{
+    position: relative;
+    width: 100%;
+    padding: 50px 0;
+    background-image: url('fondo-menu.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    color: white; /* Cambia el color del texto para que sea legible */
+    padding-top: 50px; /* Ajusta el espaciado superior para que el texto no esté pegado al borde superior */
+    opacity: 1;
+}
+
+.titulo-y-logo{
+    display: flex;
+    margin-left: 160px;
+}
+
+.titulo-y-logo img{
+    width: 50px;
+}
+
+.titulo_subse{
+    margin: 0;
+    color: #5A5A5A;
+}
+
+.titulo_subse p, h2, h3{
+    padding: 0;
+    margin: 0;
+}
+
+.volver-inicio{
+    display: flex;
+    margin: 25px 25px;
+}
+
+.volver-titulo{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #31363F;
+    align-self: center;
+    margin-left: 15px;
+    font-size: 100%;
+}
+
+#noticia-titulo{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 25px 0;
+    color: #31363F;
+}
+
+#noticia-subtitulo{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0 150px;
+    font-size: 150%;
+    line-height: 2;
+}
+
+#noticia-contenido{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    margin: 0 150px;
+    font-size: 100%;
+    line-height: 2;
+}
+
+#fechaPublicacion{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    margin-left: 100px;
+    font-size: 90%;
+}
+
+
+.footer-container{
+    padding: 50px 0;
+    background-color: #5A5A5A;
+}
+
+@media (max-width:768px){
+
+    .cabecero a{
+        margin-left: 10px;
+    }
+    
+    .transparencia{
+        display: none;
+    }
+
+    .contacto{
+        background-color: #31363F;
+        position: fixed; 
+        width: 100%;
+        z-index: 20;  
+        margin: 0;
+    }
+
+    #nav-bar{
+        display: none;
+    }
+
+    #nav-bar-mobile {
+        display: flex;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 75px;
+        height: 75px;
+        background-color:#BFD730;;
+        color: #31363F;
+        z-index: 5;
+    }
+    
+    .menu-icon {
+        display: flex;
+        align-self: center;
+        padding: 10px;
+        cursor: pointer;
+        font-size: xx-large;
+    }
+    
+    .items-nav {
+        margin: 0;
+        padding: 0;
+        display: none;
+    }
+    
+    .items-nav.active {
+        display: inline-table;
+    }
+    
+    .items-nav li {
+        display: inline-block;
+        margin-right: 20px;
+        line-height: 100px;
+    }
+    
+    .items-nav li a {
+        display: inline-block;
+        padding: 10px;
+        text-decoration: none;
+        color: white;
+        height: 100%; /* Ajusta la altura de los elementos de navegación */
+        vertical-align: middle; /* Centra verticalmente el texto */
+    }
+
+    .items-nav li:last-child {
+        margin-right: 0; /* Elimina el margen derecho del último elemento */
+        line-height: 3;
+    }
+
+    .quienes-somos-titulo{
+        margin: 0 0 50px 0;
+    }
+
+    #noticia-subtitulo{
+        margin: 0 30px;
+        text-align: justify;
+        font-size: 125%;
+    }
+
+    #noticia-contenido{
+        text-align: justify;
+        margin: 0 30px;
+        font-size: 100%;
+        line-height: 2;
+    }
+
+    #fechaPublicacion{
+        margin: 15px 30px;
+    }
+}

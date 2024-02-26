@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const titleElement = document.querySelector(`#noticia-titulo`);
         const subtitleElement = document.querySelector(`#noticia-subtitulo`);
-        const contentElement = document.querySelector(`#noticia-resumen`);
+        const contentElement = document.querySelector(`#noticia-contenido`);
         const fechaElement = document.querySelector(`#fechaPublicacion`)
 
         titleElement.textContent = titulo;
