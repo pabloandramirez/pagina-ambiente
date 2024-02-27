@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       // Actualizar los elementos HTML con los resultados
       primerosResultados.forEach((result, index) => {
-          var { titulo, subtitulo, contenido, identificador, imagenesUrl} = result;
+          var { titulo, subtitulo, contenido, identificador, imagenesUrl, fechaPublicacion} = result;
           
           
           // Obtener los elementos HTML por clase o id
@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
           const enlaceFacebookElement = document.querySelector(`#enlace-facebook-${index + 1}`);
           const enlaceXElement = document.querySelector(`#enlace-x-${index + 1}`);
           const enlaceImagen = document.querySelector(`#imagen-noticia-${index + 1}`);
+          const fechaElement = document.querySelector(`#fecha-noticia-${index +1}`);
 
           const limiteCaracteres = 75;
           if (contenido.length > limiteCaracteres) {
@@ -34,12 +35,13 @@ document.addEventListener("DOMContentLoaded", function() {
           identificador);
           enlaceXElement.setAttribute('href', 
           `https://twitter.com/intent/tweet?url=http://127.0.0.1:5500/noticia.html?id=${identificador}&text=Lee%20esta%20noticia%20interesante%20sobre%20ambiente!`);
+          fechaElement.textContent = fechaPublicacion;
 
 
           //Obtener solo la primera imagen
           if(imagenesUrl != null){
-            const primeraImagen = imagenesUrl.slice(3,4);
-            enlaceImagen.setAttribute('href', primeraImagen);
+            const primeraImagen = imagenesUrl.slice(0,1);
+            enlaceImagen.setAttribute('src', primeraImagen);
           }
 
       });
