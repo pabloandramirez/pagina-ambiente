@@ -165,6 +165,17 @@ function scrollFunction() {
 mybutton.addEventListener("click", backToTop);
 
 function backToTop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+
+  let offset = 0 // Desplazamiento de 75px hacia arriba
+        
+  if(window.innerWidth <= 768){
+    offset += 75;
+  }
+  window.scrollTo({
+    top: document.body.scrollTop = 0, // Posición de desplazamiento
+    behavior: 'smooth' // Desplazamiento suave
+  });
+  /*document.body.scrollTop = 0;
+  behavior: 'smooth' // Desplazamiento suave
+  document.documentElement.scrollTop = 0;*/
 }

@@ -3,10 +3,6 @@ body{
     margin: 0;
 }
 
-button{
-    cursor: pointer;
-}
-
 .cabecero {
     position: relative;
     background-color: #31363F;
@@ -84,7 +80,7 @@ button{
 
 .volver-inicio{
     display: flex;
-    margin: 25px 25px;
+    margin: 0 25px;
 }
 
 .volver-titulo{
@@ -95,40 +91,88 @@ button{
     font-size: 100%;
 }
 
-#noticia-titulo{
+.noticias-container{
+    background: #F7C64D;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.noticias-titulo{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     margin: 25px 0;
     color: #31363F;
 }
 
-#noticia-subtitulo{
+.noticias-flexibles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.noticias-card-noticias{
+    display: contents;
+    margin: 50px;
+    list-style: none;
+    justify-content: center;
+}
+
+.enlace-noticia{
+    text-decoration: none;
+    display: grid;
+}
+
+
+.noticia-card{
+    display: grid;
+    width: 250px;
+    height: 100%;
+    background-color:#fff;
+    padding: 10px;
+    margin: 10px 10px;
+}
+
+.noticia-card:hover{
+    background-color: #4BA32A;
+}
+
+.noticia-imagen{
+    justify-self: center;
+    width: 225px;
+    height: 175px;
+}
+
+.noticia-titulo{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    margin: 0 150px;
-    font-size: 150%;
-    line-height: 2;
+    margin: 10px 0;
+    color: #31363F;
 }
 
-#noticia-contenido{
+.noticia-subtitulo{
     font-family: Arial, Helvetica, sans-serif;
-    text-align: justify;
-    margin: 0 150px;
-    font-size: 100%;
-    line-height: 2;
+    text-align: center;
+    font-size: medium;
 }
 
-#fechaPublicacion{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: left;
-    margin-left: 100px;
-    font-size: 90%;
+.fecha-noticia{
+    margin: 0;
 }
-
 
 .footer-container{
     padding: 50px 0;
     background-color: #5A5A5A;
+}
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    z-index: 50;
 }
 
 @media (max-width:768px){
