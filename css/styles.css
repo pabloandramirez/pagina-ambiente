@@ -192,6 +192,7 @@ button{
 }
 
 .quienes-somos-container{
+    display: grid;
     position: relative;
     width: 100%;
     background-color: #c8d29c;
@@ -211,6 +212,116 @@ button{
     margin: 0 150px;
     font-size: 150%;
     line-height: 2;
+}
+
+.organigrama {
+    position: relative;
+    display: grid;
+}
+
+.flecha {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.director-general{
+    justify-self: center;
+    margin: 30px 0;
+}
+
+.directores-secundarios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre los directores secundarios */
+    justify-content: center;
+}
+
+.circular-image {
+    justify-self: center;
+    width: 200px; /* Ancho deseado de la imagen */
+    height: 200px; /* Altura deseada de la imagen */
+    border-radius: 50%; /* Hacer la imagen circular */
+    overflow: hidden; /* Ocultar cualquier parte de la imagen que se extienda fuera del círculo */
+    display: flex; /* Usar flexbox */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    box-shadow: 0 0 0 5px white; /* Agregar un borde blanco de 5px */
+}
+
+.circular-image img {
+    max-width: 150%; /* Asegurar que la imagen no se extienda fuera del círculo */
+    max-height: 150%; /* Asegurar que la imagen no se extienda fuera del círculo */
+    object-fit: cover; /* Escalar la imagen para cubrir todo el espacio disponible */
+}
+
+.tree{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.tree ul{
+    padding-top: 20px;
+    position: relative;
+    transition: .5s;
+}
+
+.tree li{
+    display: inline-table;
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 10px;
+    transition: .5s;
+}
+
+.tree li::before, .tree li::after{
+    content: '';
+    position: absolute;
+    top:0;
+    right: 50%;
+    border-top: 5px solid #ccc;
+    width: 51%;
+    height: 10px;
+}
+
+.tree li::after {
+    right: auto;
+    left: 50%;
+    border-left: 5px solid #ccc;
+}
+
+.tree li:only-child::after, .tree li:only-child::before{
+    display: none;
+}
+
+.tree li:only-child{
+    padding-top: 0;
+}
+
+.tree li:first-child::before, .tree li:last-child::after{
+    border: 0 none;
+}
+
+.tree li:last-child::before{
+    border-right: 5px solid #ccc;
+    border-radius: 0px 5px 0px 0px
+}
+
+.tree li:first-child::after{
+    border-radius: 5px 0px 0px 0px
+}
+
+.tree ul ul::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:50%;
+    border-left: 5px solid #ccc;
+    width: 0;
+    height: 20px;
 }
 
 .normativas-container{
@@ -508,7 +619,7 @@ button{
 
 .boton-ver-mas:hover{
     color: #000000;
-    background-color: #fff;
+    background-color: #5059bc;
 }
 
 .contacto-container{
@@ -704,6 +815,7 @@ input[type=number] {
         margin-right: 0; /* Elimina el margen derecho del último elemento */
         line-height: 3;
     }
+
 
     .quienes-somos-titulo{
         margin: 0 0 50px 0;
