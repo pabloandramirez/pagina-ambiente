@@ -3,9 +3,13 @@ body{
     margin: 0;
 }
 
+a:visited{
+    color: #000000;
+}
+
 .cabecero {
     position: relative;
-    background-color: #31363F;
+    background: linear-gradient(to right, #063565 0%, #5059bc 100%);
     display: flex;
     align-items: center; /* Alinea los elementos verticalmente */
     justify-content: space-between; /* Alinea los elementos a la derecha */
@@ -65,7 +69,7 @@ body{
 }
 
 .titulo-y-logo img{
-    width: 50px;
+    width: 16%;
 }
 
 .titulo_subse{
@@ -98,7 +102,7 @@ body{
     list-style: none;
     display: flex;
     justify-content: center;
-    background: linear-gradient(to right, green 0%, #4BA32A 100%);
+    background: linear-gradient(to right, #063565 0%, #5059bc 100%);
     margin: 0;
     padding: 17px 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -160,7 +164,7 @@ button{
 .titulo-card{
     font-size: 100%;
     font-family: Arial, Helvetica, sans-serif;
-    color: antiquewhite;
+    color: #fff;
     margin: 20px 10px 0 20px;
 }
 
@@ -168,7 +172,7 @@ button{
 .titulo-card hr{
     height: 2px; /* Altura de la regla horizontal */
     border: none; /* Elimina el borde */
-    background-color: antiquewhite; /* Color de la regla horizontal */
+    background-color: #fff; /* Color de la regla horizontal */
     margin: 10px 0 5px; /* Márgenes superior e inferior */
     width: 25%;
 }
@@ -177,20 +181,20 @@ button{
     text-align: justify;
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
-    color: antiquewhite;
+    color: #fff;
     margin: 0px 10px 10px 20px;
 }
 
 
 
 .card:hover{
-    background-color: #4BA32A;
+    background-color: #8a9a46;
 }
 
 .quienes-somos-container{
     position: relative;
     width: 100%;
-    background-color: #208AB0;
+    background-color: #c8d29c;
     color: white; /* Cambia el color del texto para que sea legible */
     padding: 50px 0; /* Ajusta el espaciado superior para que el texto no esté pegado al borde superior */
 }
@@ -213,8 +217,8 @@ button{
     position: relative;
     width: 100%;
     height: 500px; /* O cualquier altura que desees */
-    background-color: #5BAB3D;
-    color: white; /* Cambia el color del texto para que sea legible */
+    background-color: #f26df9;
+    color: #fff; /* Cambia el color del texto para que sea legible */
     padding: 50px 0; /* Ajusta el espaciado superior para que el texto no esté pegado al borde superior */
 }
 
@@ -380,21 +384,24 @@ button{
 
 .voluntariado-titulo{
     font-family: Arial, Helvetica, sans-serif;
+    color: #00203a;
 }
 
 .voluntariado-descripcion{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 15px 0;
     font-weight: bold;
+    color: #00203a;
 }
 
 .voluntariado-boton{
-    color: #417437;
+    color: #fff;
     margin-left: 20px;
     width: 180px; /* Ancho del input */
     height: 40px; /* Altura del input */
+    border: 1px solid #000000;
     line-height: 40px;
-    background-color: #BFD730;
+    background-color: #c8d29c;
     background-size: cover;
     display: inline-block;
     font-size: 16px;
@@ -404,12 +411,12 @@ button{
 }
 
 .voluntariado-boton:hover{
-    background-color: #37801c;
+    background-color: #8a9a46;
     color: #fff;
 }
 
 .noticias-container{
-    background: #F7C64D;
+    background: #063565;
     padding: 0;
     margin: 0;
     position: relative;
@@ -421,7 +428,7 @@ button{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     margin: 25px 0;
-    color: #31363F;
+    color: #fff;
 }
 
 .noticias-flexibles{
@@ -444,6 +451,7 @@ button{
 
 
 .noticia-card{
+    color: #000000;
     display: grid;
     width: 250px;
     height: 100%;
@@ -453,7 +461,7 @@ button{
 }
 
 .noticia-card:hover{
-    background-color: #4BA32A;
+    background-color: #8a9a46;
 }
 
 .noticia-imagen{
@@ -469,10 +477,12 @@ button{
     color: #31363F;
 }
 
+
 .noticia-subtitulo{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-size: medium;
+    color: #31363F;
 }
 
 .fecha-noticia{
@@ -484,7 +494,7 @@ button{
     margin: 20px auto;
     width: 180px; /* Ancho del input */
     height: 40px; /* Altura del input */
-    background-color: #000000;
+    background-color: #00203a;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -502,7 +512,7 @@ button{
 }
 
 .contacto-container{
-    background: #31363F;
+    background: #00203a;
     padding: 50px 0;
     margin: 0;
 }
@@ -634,7 +644,7 @@ input[type=number] {
     }
 
     .contacto{
-        background-color: #31363F;
+        background: linear-gradient(to right, #063565 0%, #5059bc 100%);
         position: fixed; 
         width: 100%;
         z-index: 20;  
@@ -652,8 +662,8 @@ input[type=number] {
         left: 0;
         width: 75px;
         height: 75px;
-        background-color:#BFD730;;
-        color: #31363F;
+        background-color:#063565;
+        color: #fff;
         z-index: 5;
     }
     

@@ -9,10 +9,10 @@ button{
 
 .cabecero {
     position: relative;
-    background-color: #31363F;
+    background: linear-gradient(to right, #063565 0%, #5059bc 100%);
     display: flex;
     align-items: center; /* Alinea los elementos verticalmente */
-    justify-content: space-between; /* Alinea los elementos a la derecha */
+    justify-content: space-between;
     margin: 0;
     padding: 0px;
     height: 75px;
@@ -82,6 +82,22 @@ button{
     margin: 0;
 }
 
+#nav-bar{
+    width: 77%;
+    margin: 0 auto;
+    position: absolute;
+    top: 220px; /* Superposición en el div superior */
+    left: 20px; /* Ajuste de la posición izquierda */
+    right: 20px; /* Ajuste de la posición derecha */
+    z-index: 1; /* Asegura que la barra de navegación esté por encima del contenido */
+}
+
+.barra-fija{
+    position: fixed; /* Lo hacemos fijo para que se mantenga en la parte superior */
+    top: 0; /* Colocamos la barra en la parte superior */
+    width: 77%; /* Ancho completo */
+}
+
 .volver-inicio{
     display: flex;
     margin: 25px 25px;
@@ -110,6 +126,10 @@ button{
     line-height: 2;
 }
 
+.bd-example-snippet{
+    margin: 0 150px;
+}
+
 #noticia-contenido{
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
@@ -121,7 +141,7 @@ button{
 #fechaPublicacion{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: left;
-    margin-left: 100px;
+    margin-left: 150px;
     font-size: 90%;
 }
 
@@ -142,19 +162,13 @@ button{
     }
 
     .contacto{
-        background-color: #31363F;
+        background: linear-gradient(to right, #063565 0%, #5059bc 100%);
+        justify-content: center;
         position: fixed; 
         width: 100%;
         z-index: 20;  
         margin: 0;
-    }
-    
-    .menu-icon {
-        display: flex;
-        align-self: center;
-        padding: 10px;
-        cursor: pointer;
-        font-size: xx-large;
+        height: 75px;
     }
 
 
@@ -162,6 +176,10 @@ button{
         margin: 0 30px;
         text-align: justify;
         font-size: 125%;
+    }
+
+    .bd-example-snippet{
+        margin: 0 30px;
     }
 
     #noticia-contenido{
