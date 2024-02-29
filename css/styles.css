@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+
 body{
     padding: 0;
     margin: 0;
@@ -19,13 +21,13 @@ a:visited{
 }
 
 .bandera {
-    margin: 0 0 0 150px;
+    margin-left: 10%;
     width: 350px;
     height: 125px;
     /*background: linear-gradient(to bottom, #1F93BC 0%,#2595D4 33%, white 33%, white 66%, #4BA32A 66%, green 100%);*/
     background: linear-gradient(to right, green 0%, #4BA32A 33%, white 33%, white 66%, #1F93BC 66%,#2595D4 100%);
     position: relative;
-    left: 0; /* Posiciona la bandera a la izquierda del header */
+    left: 20px; /* Posiciona la bandera a la izquierda del header */
     top: 0; /* Alinea la bandera al inicio del header */
     /*transform: rotate(90deg); /* Rota la bandera 90 grados */
 }
@@ -61,15 +63,16 @@ a:visited{
     color: white; /* Cambia el color del texto para que sea legible */
     padding-top: 50px; /* Ajusta el espaciado superior para que el texto no esté pegado al borde superior */
     opacity: 1;
+    height: 70px;
 }
 
 .titulo-y-logo{
     display: flex;
-    margin-left: 160px;
+    margin-left: 10%;
 }
 
 .titulo-y-logo img{
-    width: 16%;
+    width: 225px;
 }
 
 .titulo_subse{
@@ -105,7 +108,7 @@ a:visited{
     background: linear-gradient(to right, #063565 0%, #5059bc 100%);
     margin: 0;
     padding: 17px 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;;
     font-weight: bold;
     color: #fff;
 }
@@ -163,7 +166,7 @@ button{
 
 .titulo-card{
     font-size: 100%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
     color: #fff;
     margin: 20px 10px 0 20px;
 }
@@ -180,7 +183,7 @@ button{
 .descripcion-card{
     text-align: justify;
     font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
     color: #fff;
     margin: 0px 10px 10px 20px;
 }
@@ -195,19 +198,19 @@ button{
     display: grid;
     position: relative;
     width: 100%;
-    background-color: #c8d29c;
+    background-color: #8a9a46;
     color: white; /* Cambia el color del texto para que sea legible */
     padding: 50px 0; /* Ajusta el espaciado superior para que el texto no esté pegado al borde superior */
 }
 
 .quienes-somos-titulo{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
     text-align: center;
     margin: 50px 0;
 }
 
 .quienes-somos-detalle{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
     text-align: center;
     margin: 0 150px;
     font-size: 150%;
@@ -324,6 +327,10 @@ button{
     height: 20px;
 }
 
+.tree a {
+    
+}
+
 .normativas-container{
     position: relative;
     width: 100%;
@@ -334,13 +341,13 @@ button{
 }
 
 .normativas-titulo{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
     text-align: center;
     margin: 50px 0;
 }
 
 .normativas-detalle{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
     text-align: left;
     margin: 0 150px;
     font-size: 125%;
@@ -357,7 +364,7 @@ button{
 }
 
 .categoria-titulo{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
     text-align: left;
     margin: 25px 0px;
     font-size: 125%;
@@ -379,7 +386,7 @@ button{
 }
 
 .palabra-clave-titulo{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
     text-align: left;
     margin: 25px 0px;
     font-size: 125%;
@@ -408,7 +415,7 @@ button{
     border-radius: 20px; /* Radio de borde para hacerlo redondeado */
     font-size: 16px;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 .boton-buscar:hover{
@@ -433,14 +440,14 @@ button{
 }
 
 .tramites-titulo{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
     text-align: center;
     margin: 25px 0;
     color: #5A5A5A;
 }
 
 .categoria-titulo-2{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
     text-align: left;
     margin: 25px 0px;
     font-size: 125%;
@@ -449,7 +456,7 @@ button{
 }
 
 .palabra-clave-titulo-2{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
     text-align: left;
     margin: 25px 0px;
     font-size: 125%;
@@ -494,12 +501,12 @@ button{
 }
 
 .voluntariado-titulo{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
     color: #00203a;
 }
 
 .voluntariado-descripcion{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Poppins", sans-serif;
     margin: 15px 0;
     font-weight: bold;
     color: #00203a;
@@ -516,7 +523,7 @@ button{
     background-size: cover;
     display: inline-block;
     font-size: 16px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Poppins", sans-serif;
     text-align: center;
     text-decoration: none;
 }
@@ -536,7 +543,7 @@ button{
 }
 
 .noticias-titulo{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
     text-align: center;
     margin: 25px 0;
     color: #fff;
@@ -582,7 +589,7 @@ button{
 }
 
 .noticia-titulo{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
     text-align: center;
     margin: 10px 0;
     color: #31363F;
@@ -590,7 +597,7 @@ button{
 
 
 .noticia-subtitulo{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
     text-align: center;
     font-size: medium;
     color: #31363F;
@@ -611,7 +618,7 @@ button{
     justify-content: center;
     text-align: center;
     font-size: 16px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: bold;
     text-decoration: none;
     border-style: none;
@@ -629,7 +636,7 @@ button{
 }
 
 .contacto-titulo{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
     text-align: center;
     margin: 25px 0;
     color: #fff;
@@ -711,7 +718,7 @@ input[type=number] {
     display: block;
     justify-self: center;
     font-size: 16px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Poppins", sans-serif;
     text-align: center;
     text-decoration: none;
     border-style: none;
@@ -824,7 +831,7 @@ input[type=number] {
     .quienes-somos-detalle{
         margin: 0 30px;
         text-align: justify;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: "Poppins", sans-serif;
         font-size: 125%;
     }
 
