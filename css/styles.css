@@ -75,6 +75,10 @@ body{
     width: 225px;
 }
 
+.contenedor-linea-vertical{
+    margin: 0px 20px;
+}
+
 .titulo_subse{
     margin: 0;
     color: #5A5A5A;
@@ -771,9 +775,14 @@ input[type=number] {
 }
 
 @media (max-width:768px){
-    
-    .transparencia{
-        display: none;
+    .cabecero{
+        display: flex;
+    }
+
+    .bandera{
+        left: 0;
+        margin: auto;
+        justify-self: center;
     }
 
     .contacto{
@@ -782,6 +791,19 @@ input[type=number] {
         width: 100%;
         z-index: 20;  
         margin: 0;
+    }
+
+    .contenedor{
+        display: grid;
+    }
+
+    .titulo-y-logo{
+        margin: 0;
+        justify-self: center;
+    }
+
+    .contenedor-linea-vertical{
+        margin: 0 10px 0 5px;
     }
 
     #nav-bar{
