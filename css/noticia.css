@@ -1,10 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body{
     padding: 0;
     margin: 0;
-}
-
-button{
-    cursor: pointer;
 }
 
 .cabecero {
@@ -12,20 +10,20 @@ button{
     background: linear-gradient(to right, #063565 0%, #5059bc 100%);
     display: flex;
     align-items: center; /* Alinea los elementos verticalmente */
-    justify-content: space-between;
+    justify-content: space-between; /* Alinea los elementos a la derecha */
     margin: 0;
     padding: 0px;
     height: 75px;
 }
 
 .bandera {
-    margin: 0 0 0 150px;
+    margin-left: 10%;
     width: 350px;
     height: 125px;
     /*background: linear-gradient(to bottom, #1F93BC 0%,#2595D4 33%, white 33%, white 66%, #4BA32A 66%, green 100%);*/
     background: linear-gradient(to right, green 0%, #4BA32A 33%, white 33%, white 66%, #1F93BC 66%,#2595D4 100%);
     position: relative;
-    left: 0; /* Posiciona la bandera a la izquierda del header */
+    left: 20px; /* Posiciona la bandera a la izquierda del header */
     top: 0; /* Alinea la bandera al inicio del header */
     /*transform: rotate(90deg); /* Rota la bandera 90 grados */
 }
@@ -36,10 +34,6 @@ button{
     margin: 0 15px; /* Añade un margen a la derecha del párrafo */
 }
 
-.cabecero a {
-    margin-right: 10px; /* Añade un margen a la derecha de los enlaces */
-}
-
 #nav-bar-mobile{
     display: none;
 }
@@ -48,6 +42,11 @@ button{
     display: flex;
     align-items: center;
     margin: 0 70px;
+    justify-content: center;
+}
+
+.contacto-mail{
+    font-family: "Poppins", sans-serif;
 }
 
 .contenedor{
@@ -61,20 +60,23 @@ button{
     color: white; /* Cambia el color del texto para que sea legible */
     padding-top: 50px; /* Ajusta el espaciado superior para que el texto no esté pegado al borde superior */
     opacity: 1;
+    height: 70px;
 }
 
 .titulo-y-logo{
     display: flex;
-    margin-left: 160px;
+    margin-left: 10%;
 }
 
 .titulo-y-logo img{
-    width: 16%;
+    width: 225px;
 }
 
 .titulo_subse{
     margin: 0;
     color: #5A5A5A;
+    align-self: center;
+    font-family: 'Poppins';
 }
 
 .titulo_subse p, h2, h3{
@@ -104,7 +106,7 @@ button{
 }
 
 .volver-titulo{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
     color: #31363F;
     align-self: center;
     margin-left: 15px;
@@ -112,14 +114,14 @@ button{
 }
 
 #noticia-titulo{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
     text-align: center;
     margin: 25px 0;
     color: #31363F;
 }
 
 #noticia-subtitulo{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
     text-align: center;
     margin: 0 150px;
     font-size: 150%;
@@ -131,7 +133,7 @@ button{
 }
 
 #noticia-contenido{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
     text-align: justify;
     margin: 0 150px;
     font-size: 100%;
@@ -139,7 +141,7 @@ button{
 }
 
 #fechaPublicacion{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Poppins", sans-serif;
     text-align: left;
     margin-left: 150px;
     font-size: 90%;
@@ -152,10 +154,6 @@ button{
 }
 
 @media (max-width:768px){
-
-    .cabecero a{
-        margin-left: 10px;
-    }
     
     .transparencia{
         display: none;

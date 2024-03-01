@@ -31,7 +31,7 @@ body{
 
 .cabecero p {
     color: #fff;
-    margin: 0 15px; /* Añade un margen a la derecha del párrafo */
+    margin: 0; /* Añade un margen a la derecha del párrafo */
 }
 
 .cabecero a {
@@ -46,6 +46,10 @@ body{
     display: flex;
     align-items: center;
     margin: 0 70px;
+}
+
+.contacto-mail{
+    font-family: "Poppins", sans-serif;
 }
 
 .contenedor{
@@ -63,7 +67,7 @@ body{
 }
 
 .titulo-y-logo{
-    display: flex;
+    display: inline-flex;
     margin-left: 10%;
 }
 
@@ -74,6 +78,8 @@ body{
 .titulo_subse{
     margin: 0;
     color: #5A5A5A;
+    align-self: center;
+    font-family: 'Poppins';
 }
 
 .titulo_subse p, h2, h3{
@@ -104,7 +110,7 @@ body{
     background: linear-gradient(to right, #063565 0%, #5059bc 100%);
     margin: 0;
     padding: 17px 0;
-    font-family: "Poppins", sans-serif;;
+    font-family: "Poppins", sans-serif;
     font-weight: bold;
     color: #fff;
 }
@@ -321,12 +327,12 @@ button{
 }
 
 .tree a span{
+    font-family: "Poppins", sans-serif;
     border: 1px solid #ccc;
     border-radius: 25px;
     color: #fff;
     padding: 8px;
     font-size: 18px;
-    text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 500;
 }
@@ -617,6 +623,7 @@ button{
 
 .fecha-noticia{
     margin: 0;
+    font-family: "Poppins", sans-serif;
 }
 
 .boton-ver-mas{
@@ -764,10 +771,6 @@ input[type=number] {
 }
 
 @media (max-width:768px){
-
-    .cabecero a{
-        margin-left: 10px;
-    }
     
     .transparencia{
         display: none;
