@@ -33,7 +33,7 @@ async function cargarCarousel() {
         const imagenes = data.imagenesUrl;
         const carouselIndicators = document.getElementById('carouselIndicators');
         const carouselInner = document.getElementById('carouselInner');
-        
+
         imagenes.forEach((imagen, index) => {
             // Crear el indicador del carousel
             const indicator = document.createElement('button');
@@ -73,6 +73,15 @@ async function cargarCarousel() {
             `;
             carouselInner.appendChild(carouselItem);
         });
+
+        const botonPrevio = document.querySelector(".carousel-control-prev");
+        const botonNext = document.querySelector(".carousel-control-next");
+
+        if(imagenes.length===1){
+            carouselIndicators.setAttribute('style', 'display: none');
+            botonPrevio.setAttribute('style', 'display: none');
+            botonNext.setAttribute('style', 'display: none');
+        }
 
     } catch (error) {
         console.error('Error al cargar el carousel:', error);
