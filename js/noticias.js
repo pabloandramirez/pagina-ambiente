@@ -1,5 +1,5 @@
 var pagina = 1;
-var noticiasPorPagina = 8;
+const noticiasPorPagina = 8;
 
 // URL de la API de noticias (ficticia)
 const apiUrl = `http://localhost:8080/noticia/paginado?pagina=${pagina}&noticiasPorPagina=${noticiasPorPagina}`;
@@ -12,6 +12,12 @@ async function cargarNoticias() {
         
         // Obtener la lista de noticias del objeto de respuesta (suponiendo que es un arreglo llamado "noticias")
         const noticias = data;
+
+        const cantidadPaginas = noticias.length / 8;
+        
+        if(cantidadPaginas<1){
+          
+        }
         
         // Obtener el elemento <ul> donde se agregarán las noticias
         const noticiasUl = document.getElementById('noticias');
@@ -62,7 +68,7 @@ window.addEventListener('load', cargarNoticias);
 //Get the button
 let mybutton = document.getElementById("btn-back-to-top");
 
-// When the user scrolls down 20px from the top of the document, show the button
+// Cuando el usuario baja 20px se muestra el boton de subir para arriba
 window.onscroll = function () {
   scrollFunction();
 };
