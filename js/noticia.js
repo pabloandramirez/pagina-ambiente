@@ -62,13 +62,12 @@ async function cargarCarousel() {
                 preserveAspectRatio="xMidYMid slice"
                 focusable="false"
             >
-                <title>Placeholder</title>
+                <title>Imagen ${index + 1}</title>
                 <image
                 class="imagen-ambiente"
                 href="${imagen}"
                 width="100%"
                 />
-                <text x="50%" y="50%" fill="#555" dy=".3em">First slide</text>
             </svg>
             `;
             carouselInner.appendChild(carouselItem);

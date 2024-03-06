@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       // Actualizar los elementos HTML con los resultados
       primerosResultados.forEach((result, index) => {
-          var { titulo, subtitulo, contenido, identificador, imagenesUrl, fechaPublicacion} = result;
+          var { titulo, subtitulo, contenido, identificador, imagenesUrl, fechaPublicacionString} = result;
           
           
           // Obtener los elementos HTML por clase o id
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
           identificador);
           enlaceXElement.setAttribute('href', 
           `https://twitter.com/intent/tweet?url=http://127.0.0.1:5500/noticia.html?id=${identificador}&text=Lee%20esta%20noticia%20interesante%20sobre%20ambiente!`);
-          fechaElement.textContent = fechaPublicacion;
+          fechaElement.textContent = fechaPublicacionString;
 
 
           //Obtener solo la primera imagen

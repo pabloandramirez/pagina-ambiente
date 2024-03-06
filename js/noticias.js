@@ -13,11 +13,9 @@ async function cargarNoticias() {
         // Obtener la lista de noticias del objeto de respuesta (suponiendo que es un arreglo llamado "noticias")
         const noticias = data;
 
-        const cantidadPaginas = noticias.length / 8;
+        const cantidadPaginas = Math.floor(noticias.length / 8);
         
-        if(cantidadPaginas<1){
-          
-        }
+        pagina = (cantidadPaginas + 1);
         
         // Obtener el elemento <ul> donde se agregarán las noticias
         const noticiasUl = document.getElementById('noticias');
@@ -41,7 +39,7 @@ async function cargarNoticias() {
                     <h3 class="noticia-titulo">${noticia.titulo}</h3>
                     <h3 class="noticia-subtitulo">${noticia.subtitulo}</h3>
                     <p class="noticia-resumen">${contenido}</p>
-                    <p class="fecha-noticia">${noticia.fechaPublicacion}</p>
+                    <p class="fecha-noticia">${noticia.fechaPublicacionString}</p>
                     <div>
                         <a data-id="${index + 1}" class="enlace-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:5500/noticia.html?id=${noticia.identificador}">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50 50">
