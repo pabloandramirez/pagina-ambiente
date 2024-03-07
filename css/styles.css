@@ -50,6 +50,7 @@ body{
 
 .contacto-mail{
     font-family: "Poppins", sans-serif;
+    text-decoration: none;
 }
 
 .contenedor{

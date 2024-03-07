@@ -4,6 +4,7 @@ const noticiasPorPagina = 8;
 // URL de la API de noticias (ficticia)
 const apiUrl = `http://localhost:8080/noticia/paginado?pagina=${pagina}&noticiasPorPagina=${noticiasPorPagina}`;
 
+
 // Función para obtener datos de la API y generar elementos li
 async function cargarNoticias() {
     try {
@@ -12,10 +13,6 @@ async function cargarNoticias() {
         
         // Obtener la lista de noticias del objeto de respuesta (suponiendo que es un arreglo llamado "noticias")
         const noticias = data;
-
-        const cantidadPaginas = Math.floor(noticias.length / 8);
-        
-        pagina = (cantidadPaginas + 1);
         
         // Obtener el elemento <ul> donde se agregarán las noticias
         const noticiasUl = document.getElementById('noticias');
@@ -55,10 +52,30 @@ async function cargarNoticias() {
                 </a>`;
             noticiasUl.appendChild(li);
         });
-    } catch (error) {
+
+        const cantidadPaginas = Math.floor(noticias.length / 8) + 1;
+
+        const paginadoList = document.getElementById('pagination');
+        const botonNext = document.getElementById('next-page');
+
+        for (let index = 0; index < cantidadPaginas; index++) {
+          const newPageItem = document.createElement('li');
+          newPageItem.classList.add('page-item');
+          if(index===0){
+            newPageItem.classList.add('active');
+          }
+          const newPageLink = document.createElement('a');
+          newPageLink.classList.add('page-link');
+          newPageLink.href = '#';
+          newPageLink.textContent = index + 1;
+          newPageItem.appendChild(newPageLink);
+          paginadoList.insertBefore(newPageItem, botonNext.parentNode);
+    }
+  } catch (error) {
         console.error('Error al cargar las noticias:', error);
     }
 }
+
 
 // Llamar a la función para cargar las noticias al cargar la página
 window.addEventListener('load', cargarNoticias);
