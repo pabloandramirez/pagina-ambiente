@@ -1,13 +1,13 @@
-var pagina = 1;
+const apiUrlBase = 'http://localhost:8080/noticia/paginado';
 const noticiasPorPagina = 8;
-
-// URL de la API de noticias (ficticia)
-const apiUrl = `http://localhost:8080/noticia/paginado?pagina=${pagina}&noticiasPorPagina=${noticiasPorPagina}`;
+const urlParams = new URLSearchParams(window.location.search);
+const numeroPagina = urlParams.get('pagina');
 
 
 // Función para obtener datos de la API y generar elementos li
-async function cargarNoticias() {
-    try {
+async function cargarNoticias(numeroPagina) {
+  try {
+        const apiUrl = `${apiUrlBase}?pagina=${numeroPagina}&noticiasPorPagina=${noticiasPorPagina}`;
         const response = await fetch(apiUrl);
         const data = await response.json();
         
@@ -52,33 +52,63 @@ async function cargarNoticias() {
                 </a>`;
             noticiasUl.appendChild(li);
         });
-
-        const cantidadPaginas = Math.floor(noticias.length / 8) + 1;
-
-        const paginadoList = document.getElementById('pagination');
-        const botonNext = document.getElementById('next-page');
-
-        for (let index = 0; index < cantidadPaginas; index++) {
-          const newPageItem = document.createElement('li');
-          newPageItem.classList.add('page-item');
-          if(index===0){
-            newPageItem.classList.add('active');
-          }
-          const newPageLink = document.createElement('a');
-          newPageLink.classList.add('page-link');
-          newPageLink.href = '#';
-          newPageLink.textContent = index + 1;
-          newPageItem.appendChild(newPageLink);
-          paginadoList.insertBefore(newPageItem, botonNext.parentNode);
     }
-  } catch (error) {
+   catch (error) {
         console.error('Error al cargar las noticias:', error);
     }
 }
 
 
+const apiUrlNoticias = 'http://localhost:8080/noticia/';
+
+async function todasLasNoticias(){
+  try {
+    const response = await fetch(apiUrlNoticias);
+    const data = await response.json();
+
+    const paginadoList = document.getElementById('pagination');
+    const botonNext = document.getElementById('next-page');
+
+    const cantidadNoticias = data.length;
+    const cantidadPaginas = Math.ceil(cantidadNoticias / noticiasPorPagina);
+
+    paginadoList.addEventListener('click', function(event) {
+      if (!event.target.classList.contains('activo')) {
+          event.preventDefault();
+          const nuevaPagina = parseInt(event.target.textContent);
+          window.location.href = `noticias.html?pagina=${nuevaPagina}`;
+      }
+    });
+
+    function inicializarPaginado(cantidadPaginas) {
+      for (let index = 0; index < cantidadPaginas; index++) {
+          const newPageItem = document.createElement('li');
+          newPageItem.classList.add('page-item');
+          const newPageLink = document.createElement('a');
+          newPageLink.classList.add('page-link');
+          newPageLink.textContent = index + 1;
+          if(index === 0) {
+            newPageItem.classList.add('active');
+            newPageLink.classList.add('activo');
+          }
+          if(index!=0){
+            newPageLink.href = `noticias.html?pagina=${index+1}`;
+          }
+          newPageItem.appendChild(newPageLink);
+          paginadoList.insertBefore(newPageItem, botonNext.parentNode);
+      }
+    }
+
+    inicializarPaginado(cantidadPaginas);
+
+  } catch (error) {
+      console.error('No se cargo todas las noticias: ', error)
+  }
+}
+
 // Llamar a la función para cargar las noticias al cargar la página
-window.addEventListener('load', cargarNoticias);
+window.addEventListener('load', cargarNoticias(numeroPagina), todasLasNoticias());
+
 
 //Get the button
 let mybutton = document.getElementById("btn-back-to-top");
