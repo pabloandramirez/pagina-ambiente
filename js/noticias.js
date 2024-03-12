@@ -1,7 +1,7 @@
 const apiUrlBase = 'http://localhost:8080/noticia/paginado';
 const noticiasPorPagina = 8;
-const urlParams = new URLSearchParams(window.location.search);
-const numeroPagina = urlParams.get('pagina');
+/*const urlParams = new URLSearchParams(window.location.search);
+const numeroPagina = urlParams.get('pagina');*/
 
 
 // Función para obtener datos de la API y generar elementos li
@@ -16,6 +16,8 @@ async function cargarNoticias(numeroPagina) {
         
         // Obtener el elemento <ul> donde se agregarán las noticias
         const noticiasUl = document.getElementById('noticias');
+
+        noticiasUl.innerHTML = '';
         
         // Generar elementos <li> para cada noticia y agregarlos al <ul>
         noticias.forEach((noticia, index) => {
@@ -76,7 +78,10 @@ async function todasLasNoticias(){
       if (!event.target.classList.contains('activo')) {
           event.preventDefault();
           const nuevaPagina = parseInt(event.target.textContent);
-          window.location.href = `noticias.html?pagina=${nuevaPagina}`;
+          window.addEventListener('load', function(){
+            cargarNoticias(nuevaPagina);
+          })
+          /*window.location.href = `noticias.html?pagina=${nuevaPagina}`;*/
       }
     });
 
@@ -89,11 +94,8 @@ async function todasLasNoticias(){
           newPageLink.textContent = index + 1;
           if(index === 0) {
             newPageItem.classList.add('active');
-            newPageLink.classList.add('activo');
           }
-          if(index!=0){
-            newPageLink.href = `noticias.html?pagina=${index+1}`;
-          }
+          newPageLink.href = '#'/*`noticias.html?pagina=${index+1}`*/;
           newPageItem.appendChild(newPageLink);
           paginadoList.insertBefore(newPageItem, botonNext.parentNode);
       }
@@ -107,8 +109,26 @@ async function todasLasNoticias(){
 }
 
 // Llamar a la función para cargar las noticias al cargar la página
-window.addEventListener('load', cargarNoticias(numeroPagina), todasLasNoticias());
+window.addEventListener('load', cargarNoticias(1), todasLasNoticias());
 
+
+document.getElementById('pagination').addEventListener('click', function(event) {
+  if (event.target.tagName === 'A' && !event.target.classList.contains('page-link-disabled')) {
+      event.preventDefault();
+
+      const paginas2 = document.querySelectorAll('.pagination .page-item');
+      paginas2.forEach(function(pagina) {
+          pagina.classList.remove('active');
+      });
+
+      // Agregar la clase 'activo' al elemento de página clicado
+      event.target.parentNode.classList.add('active');
+
+      // Obtener el número de página del elemento de página clicado
+      const nuevaPagina = parseInt(event.target.textContent);
+      cargarNoticias(nuevaPagina);
+  }
+});
 
 //Get the button
 let mybutton = document.getElementById("btn-back-to-top");
