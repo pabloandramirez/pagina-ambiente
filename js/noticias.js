@@ -1,26 +1,56 @@
 const apiUrlBase = 'http://localhost:8080/noticia/paginado';
+const apiUrlNoticias = 'http://localhost:8080/noticia/';
 const noticiasPorPagina = 8;
-/*const urlParams = new URLSearchParams(window.location.search);
-const numeroPagina = urlParams.get('pagina');*/
+const previousPageBtn = document.getElementById('previous-page');
+const nextPageBtn = document.getElementById('next-page');
+let totalPages = 0;
 
 
-// Función para obtener datos de la API y generar elementos li
+window.addEventListener('load', function() {
+    cargarNoticias(1)
+        .then(() => todasLasNoticias())
+        .catch(error => console.error('Error al cargar las noticias:', error));
+});
+
+let paginaActual = 1;
+
+document.getElementById('pagination').addEventListener('click', function(event) {
+    if (event.target.tagName === 'A' && !event.target.classList.contains('page-link-disabled')) {
+        event.preventDefault();
+        const paginaClicada = parseInt(event.target.textContent);
+        if (!isNaN(paginaClicada) && paginaClicada !== paginaActual) {
+            paginaActual = paginaClicada;
+            cargarNoticias(paginaActual)
+                .then(() => updatePagination())
+                .catch(error => console.error('Error al cargar las noticias:', error));
+        }
+
+        if(event.target.classList.contains('previous-page')) {
+            cargarNoticias(paginaActual - 1);
+            paginaActual--;
+            console.log(paginaActual);
+        };
+        
+        if(event.target.classList.contains('next-page')) {
+            cargarNoticias(paginaActual + 1);
+            paginaActual++;
+            console.log(paginaActual);
+        };
+    }
+});
+
 async function cargarNoticias(numeroPagina) {
-  try {
+    try {
         const apiUrl = `${apiUrlBase}?pagina=${numeroPagina}&noticiasPorPagina=${noticiasPorPagina}`;
         const response = await fetch(apiUrl);
         const data = await response.json();
-        
-        // Obtener la lista de noticias del objeto de respuesta (suponiendo que es un arreglo llamado "noticias")
         const noticias = data;
-        
-        // Obtener el elemento <ul> donde se agregarán las noticias
-        const noticiasUl = document.getElementById('noticias');
 
+        const noticiasUl = document.getElementById('noticias');
         noticiasUl.innerHTML = '';
-        
-        // Generar elementos <li> para cada noticia y agregarlos al <ul>
+
         noticias.forEach((noticia, index) => {
+            // Crear elementos de noticias
             const li = document.createElement('li');
             li.classList.add('noticia-card');
             var { imagenesUrl, contenido } = noticia;
@@ -54,81 +84,70 @@ async function cargarNoticias(numeroPagina) {
                 </a>`;
             noticiasUl.appendChild(li);
         });
-    }
-   catch (error) {
-        console.error('Error al cargar las noticias:', error);
+
+        updatePagination(); // Actualizar la paginación después de cargar las noticias
+
+        return Promise.resolve(); // Promesa resuelta para indicar que la carga de noticias se completó correctamente
+    } catch (error) {
+        return Promise.reject(error); // Rechazar la promesa en caso de error
     }
 }
 
-
-const apiUrlNoticias = 'http://localhost:8080/noticia/';
-
-async function todasLasNoticias(){
-  try {
-    const response = await fetch(apiUrlNoticias);
-    const data = await response.json();
-
-    const paginadoList = document.getElementById('pagination');
-    const botonNext = document.getElementById('next-page');
-
-    const cantidadNoticias = data.length;
-    const cantidadPaginas = Math.ceil(cantidadNoticias / noticiasPorPagina);
-
-    paginadoList.addEventListener('click', function(event) {
-      if (!event.target.classList.contains('activo')) {
-          event.preventDefault();
-          const nuevaPagina = parseInt(event.target.textContent);
-          window.addEventListener('load', function(){
-            cargarNoticias(nuevaPagina);
-          })
-          /*window.location.href = `noticias.html?pagina=${nuevaPagina}`;*/
-      }
+function updatePagination() {
+    const paginas = document.querySelectorAll('.pagination .page-item');
+    paginas.forEach(function(pagina) {
+        pagina.classList.remove('active');
+        if (parseInt(pagina.querySelector('.page-link').textContent) === paginaActual) {
+            pagina.classList.add('active');
+        }
     });
-
-    function inicializarPaginado(cantidadPaginas) {
-      for (let index = 0; index < cantidadPaginas; index++) {
-          const newPageItem = document.createElement('li');
-          newPageItem.classList.add('page-item');
-          const newPageLink = document.createElement('a');
-          newPageLink.classList.add('page-link');
-          newPageLink.textContent = index + 1;
-          if(index === 0) {
-            newPageItem.classList.add('active');
-          }
-          newPageLink.href = '#'/*`noticias.html?pagina=${index+1}`*/;
-          newPageItem.appendChild(newPageLink);
-          paginadoList.insertBefore(newPageItem, botonNext.parentNode);
+    // Actualizar el estado de los botones de página anterior y siguiente
+    // según la página actual y el número total de páginas
+    if (paginaActual === 1) {
+        previousPageBtn.parentElement.classList.add('disabled');
+        nextPageBtn.parentElement.classList.remove('disabled');
+        console.log("coincide con uno");
+      } else if(paginaActual === totalPages) {
+        nextPageBtn.parentElement.classList.add('disabled');
+        previousPageBtn.parentElement.classList.remove('disabled');
+        console.log("coincide con tres");
+      } else {
+        previousPageBtn.parentElement.classList.remove('disabled');
+        nextPageBtn.parentElement.classList.remove('disabled');
+        console.log("coincide con otro");
       }
-    }
-
-    inicializarPaginado(cantidadPaginas);
-
-  } catch (error) {
-      console.error('No se cargo todas las noticias: ', error)
-  }
 }
 
-// Llamar a la función para cargar las noticias al cargar la página
-window.addEventListener('load', cargarNoticias(1), todasLasNoticias());
+async function todasLasNoticias() {
+    try {
+        const response = await fetch(apiUrlNoticias);
+        const data = await response.json();
 
+        const cantidadNoticias = data.length;
+        const cantidadPaginas = Math.ceil(cantidadNoticias / noticiasPorPagina);
+        totalPages = cantidadPaginas;
 
-document.getElementById('pagination').addEventListener('click', function(event) {
-  if (event.target.tagName === 'A' && !event.target.classList.contains('page-link-disabled')) {
-      event.preventDefault();
-
-      const paginas2 = document.querySelectorAll('.pagination .page-item');
-      paginas2.forEach(function(pagina) {
-          pagina.classList.remove('active');
-      });
-
-      // Agregar la clase 'activo' al elemento de página clicado
-      event.target.parentNode.classList.add('active');
-
-      // Obtener el número de página del elemento de página clicado
-      const nuevaPagina = parseInt(event.target.textContent);
-      cargarNoticias(nuevaPagina);
-  }
-});
+        // Inicializar la paginación
+        const paginadoList = document.getElementById('pagination');
+        /*paginadoList.innerHTML = ''; // Limpiar el contenido existente*/
+        for (let index = 1; index <= cantidadPaginas; index++) {
+            const newPageItem = document.createElement('li');
+            newPageItem.classList.add('page-item');
+            if (index === paginaActual) {
+                newPageItem.classList.add('active');
+            }
+            const newPageLink = document.createElement('a');
+            newPageLink.classList.add('page-link');
+            newPageLink.href = '#';
+            newPageLink.textContent = index;
+            newPageItem.appendChild(newPageLink);
+            paginadoList.appendChild(newPageItem);
+            paginadoList.insertBefore(newPageItem, nextPageBtn.parentNode);
+        }
+    } catch (error) {
+        console.error('No se cargaron todas las noticias:', error);
+    }
+}
 
 //Get the button
 let mybutton = document.getElementById("btn-back-to-top");
