@@ -13,13 +13,13 @@ body{
     justify-content: space-between; /* Alinea los elementos a la derecha */
     margin: 0;
     padding: 0px;
-    height: 75px;
+    height: 50px;
 }
 
 .bandera {
     margin-left: 10%;
     width: 350px;
-    height: 125px;
+    height: 90px;
     /*background: linear-gradient(to bottom, #1F93BC 0%,#2595D4 33%, white 33%, white 66%, #4BA32A 66%, green 100%);*/
     background: linear-gradient(to right, green 0%, #4BA32A 33%, white 33%, white 66%, #1F93BC 66%,#2595D4 100%);
     position: relative;
@@ -31,7 +31,11 @@ body{
 
 .cabecero p {
     color: #fff;
-    margin: 0 15px; /* Añade un margen a la derecha del párrafo */
+    margin: 0; /* Añade un margen a la derecha del párrafo */
+}
+
+.cabecero a {
+    margin-right: 10px; /* Añade un margen a la derecha de los enlaces */
 }
 
 #nav-bar-mobile{
@@ -42,34 +46,37 @@ body{
     display: flex;
     align-items: center;
     margin: 0 70px;
-    justify-content: center;
 }
 
 .contacto-mail{
     font-family: "Poppins", sans-serif;
+    text-decoration: none;
 }
 
 .contenedor{
     position: relative;
     width: 100%;
-    padding: 50px 0;
+    padding: 25px 0;
     background-image: url('fondo-menu.jpg'); /* Ruta de la imagen de fondo */
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
     background-position: center; /* Centra la imagen de fondo */
     background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
     color: white; /* Cambia el color del texto para que sea legible */
-    padding-top: 50px; /* Ajusta el espaciado superior para que el texto no esté pegado al borde superior */
     opacity: 1;
     height: 70px;
 }
 
 .titulo-y-logo{
-    display: flex;
+    display: inline-flex;
     margin-left: 10%;
 }
 
 .titulo-y-logo img{
     width: 225px;
+}
+
+.contenedor-linea-vertical{
+    margin: 0px 20px;
 }
 
 .titulo_subse{

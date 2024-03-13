@@ -13,13 +13,13 @@ body{
     justify-content: space-between; /* Alinea los elementos a la derecha */
     margin: 0;
     padding: 0px;
-    height: 75px;
+    height: 50px;
 }
 
 .bandera {
     margin-left: 10%;
     width: 350px;
-    height: 125px;
+    height: 90px;
     /*background: linear-gradient(to bottom, #1F93BC 0%,#2595D4 33%, white 33%, white 66%, #4BA32A 66%, green 100%);*/
     background: linear-gradient(to right, green 0%, #4BA32A 33%, white 33%, white 66%, #1F93BC 66%,#2595D4 100%);
     position: relative;
@@ -56,13 +56,12 @@ body{
 .contenedor{
     position: relative;
     width: 100%;
-    padding: 50px 0;
+    padding: 25px 0;
     background-image: url('fondo-menu.jpg'); /* Ruta de la imagen de fondo */
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
     background-position: center; /* Centra la imagen de fondo */
     background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
     color: white; /* Cambia el color del texto para que sea legible */
-    padding-top: 50px; /* Ajusta el espaciado superior para que el texto no esté pegado al borde superior */
     opacity: 1;
     height: 70px;
 }
@@ -84,7 +83,7 @@ body{
     margin: 0;
     color: #5A5A5A;
     align-self: center;
-    font-family: 'Poppins';
+    font-family: "Poppins", sans-serif;
 }
 
 .titulo_subse p, h2, h3{
@@ -96,7 +95,7 @@ body{
     width: 77%;
     margin: 0 auto;
     position: absolute;
-    top: 220px; /* Superposición en el div superior */
+    top: 155px; /* Superposición en el div superior */
     left: 20px; /* Ajuste de la posición izquierda */
     right: 20px; /* Ajuste de la posición derecha */
     z-index: 1; /* Asegura que la barra de navegación esté por encima del contenido */
@@ -114,7 +113,7 @@ body{
     justify-content: center;
     background: linear-gradient(to right, #063565 0%, #5059bc 100%);
     margin: 0;
-    padding: 17px 0;
+    padding: 5px 0;
     font-family: "Poppins", sans-serif;
     font-weight: bold;
     color: #fff;
@@ -126,7 +125,7 @@ body{
 }
 
 .items-nav a:hover{
-    color: #5A5A5A;
+    color: #55657A;
 }
 
 .item{
@@ -207,13 +206,13 @@ button{
     width: 100%;
     background-color: #8a9a46;
     color: white; /* Cambia el color del texto para que sea legible */
-    padding: 50px 0; /* Ajusta el espaciado superior para que el texto no esté pegado al borde superior */
+    padding: 10px 0; /* Ajusta el espaciado superior para que el texto no esté pegado al borde superior */
 }
 
 .quienes-somos-titulo{
     font-family: "Poppins", sans-serif;
     text-align: center;
-    margin: 50px 0;
+    margin: 25px 0;
 }
 
 .quienes-somos-detalle{
@@ -356,13 +355,13 @@ button{
     height: 500px; /* O cualquier altura que desees */
     background-color: #063565;
     color: #fff; /* Cambia el color del texto para que sea legible */
-    padding: 50px 0; /* Ajusta el espaciado superior para que el texto no esté pegado al borde superior */
+    padding: 10px 0; /* Ajusta el espaciado superior para que el texto no esté pegado al borde superior */
 }
 
 .normativas-titulo{
     font-family: "Poppins", sans-serif;
     text-align: center;
-    margin: 50px 0;
+    margin: 25px 0;
 }
 
 .normativas-detalle{
@@ -447,7 +446,7 @@ button{
 }
 
 .tramites-container{
-    padding: 50px 0;
+    padding: 10px 0;
     position: relative;
     width: 100%;
     background-image: url('fondo-menu.jpg'); /* Ruta de la imagen de fondo */
@@ -554,11 +553,10 @@ button{
 
 .noticias-container{
     background: #5059bc;
-    padding: 0;
     margin: 0;
     position: relative;
     width: 100%;
-    padding: 50px 0;
+    padding: 10px 0;
 }
 
 .noticias-titulo{
@@ -595,16 +593,18 @@ button{
     background-color:#fff;
     padding: 10px;
     margin: 10px 10px;
+    border-radius: 20px 0 20px 0;
 }
 
 .noticia-card:hover{
-    background-color: #8a9a46;
+    background-color: #f26df9;
 }
 
 .noticia-imagen{
     justify-self: center;
     width: 225px;
     height: 175px;
+    border-radius: 20px 0 20px 0;
 }
 
 .noticia-titulo{
@@ -654,8 +654,8 @@ button{
 }
 
 .contacto-container{
-    background: #f26df9;
-    padding: 50px 0;
+    background: #8a9a46;
+    padding: 10px 0;
     margin: 0;
 }
 
@@ -763,7 +763,7 @@ input[type=number] {
 }
 
 .footer-container{
-    padding: 50px 0;
+    padding: 10px 0;
     background-color: #5A5A5A;
 }
 
