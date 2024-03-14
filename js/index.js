@@ -62,7 +62,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         let offset = 0 // Desplazamiento de 75px hacia arriba
         
         if(window.innerWidth <= 768){
-          offset += 62;
+          offset += 50;
         }
         window.scrollTo({
           top: targetElement.offsetTop - offset, // Posición de desplazamiento

@@ -38,10 +38,6 @@ body{
     margin-right: 10px; /* Añade un margen a la derecha de los enlaces */
 }
 
-#nav-bar-mobile{
-    display: none;
-}
-
 .contacto{
     display: flex;
     align-items: center;
@@ -54,6 +50,7 @@ body{
 }
 
 .contenedor{
+    display: flex;
     position: relative;
     width: 100%;
     padding: 25px 0;
@@ -68,11 +65,15 @@ body{
 
 .titulo-y-logo{
     display: inline-flex;
-    margin-left: 10%;
+    margin-left: 12%;
 }
 
-.titulo-y-logo img{
+.logo-provincia img{
     width: 225px;
+}
+
+.logo-provincia-2{
+    display: none;
 }
 
 .contenedor-linea-vertical{
@@ -84,9 +85,11 @@ body{
     color: #5A5A5A;
     align-self: center;
     font-family: "Poppins", sans-serif;
+    line-height: 20px;
+    line-height: 20px;
 }
 
-.titulo_subse p, h2, h3{
+.titulo_subse h3{
     padding: 0;
     margin: 0;
 }
@@ -99,6 +102,10 @@ body{
     left: 20px; /* Ajuste de la posición izquierda */
     right: 20px; /* Ajuste de la posición derecha */
     z-index: 1; /* Asegura que la barra de navegación esté por encima del contenido */
+}
+
+#nav-bar-mobile{
+    display: none;
 }
 
 .barra-fija{
@@ -763,8 +770,24 @@ input[type=number] {
 }
 
 .footer-container{
-    padding: 10px 0;
+    display: flex;
+    padding: 25px 0;
     background-color: #5A5A5A;
+    height: 70px;
+}
+
+.titulo_subse_footer{
+    margin: 0;
+    color: #fff;
+    align-self: center;
+    font-family: "Poppins", sans-serif;
+    line-height: 20px;
+    line-height: 20px;
+}
+
+.titulo_subse_footer h3{
+    padding: 0;
+    margin: 0;
 }
 
 #btn-back-to-top {
@@ -781,9 +804,7 @@ input[type=number] {
     }
 
     .bandera{
-        left: 0;
-        margin: auto;
-        justify-self: center;
+        display: none;
     }
 
     .contacto{
@@ -792,15 +813,32 @@ input[type=number] {
         width: 100%;
         z-index: 20;  
         margin: 0;
+        justify-content: space-between;
     }
 
-    .contenedor{
-        display: grid;
+    .logo-mail{
+        display: none;
     }
 
     .titulo-y-logo{
         margin: 0;
         justify-self: center;
+    }
+
+    .logo-provincia{
+        display: none;
+    }
+
+    .logo-provincia-2{
+        display: flex;
+    }
+
+    .logo-provincia-2 img{
+        width: 70px;
+    }
+
+    .titulo_subse{
+        line-height: 18px;
     }
 
     .contenedor-linea-vertical{
@@ -816,8 +854,8 @@ input[type=number] {
         position: relative;
         top: 0;
         left: 0;
-        width: 75px;
-        height: 75px;
+        width: 50px;
+        height: 50px;
         background-color:#063565;
         color: #fff;
         z-index: 5;
@@ -826,9 +864,10 @@ input[type=number] {
     .menu-icon {
         display: flex;
         align-self: center;
-        padding: 10px;
+        padding: 0;
         cursor: pointer;
         font-size: xx-large;
+        margin-left: 20%;
     }
     
     .items-nav {
@@ -859,6 +898,10 @@ input[type=number] {
     .items-nav li:last-child {
         margin-right: 0; /* Elimina el margen derecho del último elemento */
         line-height: 3;
+    }
+
+    .carousel-indicators{
+        display: none;
     }
 
 
