@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
 
 body{
     padding: 0;
@@ -45,7 +47,7 @@ body{
 }
 
 .contacto-mail{
-    font-family: "Poppins", sans-serif;
+    font-family: "Manrope", sans-serif;
     text-decoration: none;
 }
 
@@ -84,7 +86,7 @@ body{
     margin: 0;
     color: #5A5A5A;
     align-self: center;
-    font-family: "Poppins", sans-serif;
+    font-family: "Kanit", sans-serif;
     line-height: 20px;
     line-height: 20px;
 }
@@ -121,7 +123,7 @@ body{
     background: linear-gradient(to right, #063565 0%, #5059bc 100%);
     margin: 0;
     padding: 5px 0;
-    font-family: "Poppins", sans-serif;
+    font-family: "Kanit", sans-serif;
     font-weight: bold;
     color: #fff;
 }
@@ -179,7 +181,7 @@ button{
 
 .titulo-card{
     font-size: 100%;
-    font-family: "Poppins", sans-serif;
+    font-family: "Kanit", sans-serif;
     color: #fff;
     margin: 20px 10px 0 20px;
 }
@@ -196,7 +198,7 @@ button{
 .descripcion-card{
     text-align: justify;
     font-size: 12px;
-    font-family: "Poppins", sans-serif;
+    font-family: "Manrope", sans-serif;
     color: #fff;
     margin: 0px 10px 10px 20px;
 }
@@ -217,13 +219,13 @@ button{
 }
 
 .quienes-somos-titulo{
-    font-family: "Poppins", sans-serif;
+    font-family: "Kanit", sans-serif;
     text-align: center;
     margin: 25px 0;
 }
 
 .quienes-somos-detalle{
-    font-family: "Poppins", sans-serif;
+    font-family: "Manrope", sans-serif;
     text-align: center;
     margin: 0 150px;
     font-size: 150%;
@@ -338,7 +340,7 @@ button{
 }
 
 .tree a span{
-    font-family: "Poppins", sans-serif;
+    font-family: "Kanit", sans-serif;
     border: 1px solid #ccc;
     border-radius: 25px;
     color: #fff;
@@ -366,13 +368,13 @@ button{
 }
 
 .normativas-titulo{
-    font-family: "Poppins", sans-serif;
+    font-family: "Kanit", sans-serif;
     text-align: center;
     margin: 25px 0;
 }
 
 .normativas-detalle{
-    font-family: "Poppins", sans-serif;
+    font-family: "Manrope", sans-serif;
     text-align: left;
     margin: 0 150px;
     font-size: 125%;
@@ -389,7 +391,7 @@ button{
 }
 
 .categoria-titulo{
-    font-family: "Poppins", sans-serif;
+    font-family: "Kanit", sans-serif;
     text-align: left;
     margin: 25px 0px;
     font-size: 125%;
@@ -411,7 +413,7 @@ button{
 }
 
 .palabra-clave-titulo{
-    font-family: "Poppins", sans-serif;
+    font-family: "Kanit", sans-serif;
     text-align: left;
     margin: 25px 0px;
     font-size: 125%;
@@ -440,7 +442,7 @@ button{
     border-radius: 20px; /* Radio de borde para hacerlo redondeado */
     font-size: 16px;
     font-weight: bold;
-    font-family: "Poppins", sans-serif;
+    font-family: "Kanit", sans-serif;
 }
 
 .boton-buscar:hover{
@@ -465,14 +467,14 @@ button{
 }
 
 .tramites-titulo{
-    font-family: "Poppins", sans-serif;
+    font-family: "Kanit", sans-serif;
     text-align: center;
     margin: 25px 0;
     color: #5A5A5A;
 }
 
 .categoria-titulo-2{
-    font-family: "Poppins", sans-serif;
+    font-family: "Kanit", sans-serif;
     text-align: left;
     margin: 25px 0px;
     font-size: 125%;
@@ -481,7 +483,7 @@ button{
 }
 
 .palabra-clave-titulo-2{
-    font-family: "Poppins", sans-serif;
+    font-family: "Kanit", sans-serif;
     text-align: left;
     margin: 25px 0px;
     font-size: 125%;
@@ -526,12 +528,12 @@ button{
 }
 
 .voluntariado-titulo{
-    font-family: "Poppins", sans-serif;
+    font-family: "Kanit", sans-serif;
     color: #00203a;
 }
 
 .voluntariado-descripcion{
-    font-family: "Poppins", sans-serif;
+    font-family: "Manrope", sans-serif;
     margin: 15px 0;
     font-weight: bold;
     color: #00203a;
@@ -548,7 +550,7 @@ button{
     background-size: cover;
     display: inline-block;
     font-size: 16px;
-    font-family: "Poppins", sans-serif;
+    font-family: "Kanit", sans-serif;
     text-align: center;
     text-decoration: none;
 }
@@ -567,7 +569,7 @@ button{
 }
 
 .noticias-titulo{
-    font-family: "Poppins", sans-serif;
+    font-family: "Kanit", sans-serif;
     text-align: center;
     margin: 25px 0;
     color: #fff;
@@ -615,7 +617,7 @@ button{
 }
 
 .noticia-titulo{
-    font-family: "Poppins", sans-serif;
+    font-family: "Kanit", sans-serif;
     text-align: center;
     margin: 10px 0;
     color: #31363F;
@@ -623,19 +625,25 @@ button{
 
 
 .noticia-subtitulo{
-    font-family: "Poppins", sans-serif;
+    margin: auto;
+    font-family: "Manrope", sans-serif;
     text-align: center;
     font-size: medium;
     color: #31363F;
 }
 
 .noticia-resumen{
-    font-family: "Poppins", sans-serif;
+    font-family: "Manrope", sans-serif;
+}
+
+.fecha-publicacion{
+    display: flex;
+    align-items: center;
 }
 
 .fecha-noticia{
-    margin: 0;
-    font-family: "Poppins", sans-serif;
+    margin: 0 0 0 5px;
+    font-family: "Manrope", sans-serif;
 }
 
 .boton-ver-mas{
@@ -649,7 +657,7 @@ button{
     justify-content: center;
     text-align: center;
     font-size: 16px;
-    font-family: "Poppins", sans-serif;
+    font-family: "Kanit", sans-serif;
     font-weight: bold;
     text-decoration: none;
     border-style: none;
@@ -667,7 +675,7 @@ button{
 }
 
 .contacto-titulo{
-    font-family: "Poppins", sans-serif;
+    font-family: "Kanit", sans-serif;
     text-align: center;
     margin: 25px 0;
     color: #fff;
@@ -749,7 +757,7 @@ input[type=number] {
     display: block;
     justify-self: center;
     font-size: 16px;
-    font-family: "Poppins", sans-serif;
+    font-family: "Kanit", sans-serif;
     text-align: center;
     text-decoration: none;
     border-style: none;
@@ -780,7 +788,7 @@ input[type=number] {
     margin: 0;
     color: #fff;
     align-self: center;
-    font-family: "Poppins", sans-serif;
+    font-family: "Kanit", sans-serif;
     line-height: 20px;
     line-height: 20px;
 }
@@ -821,7 +829,7 @@ input[type=number] {
     }
 
     .titulo-y-logo{
-        margin: 0;
+        margin: 0 10px;
         justify-self: center;
     }
 
@@ -912,7 +920,6 @@ input[type=number] {
     .quienes-somos-detalle{
         margin: 0 30px;
         text-align: justify;
-        font-family: "Poppins", sans-serif;
         font-size: 125%;
     }
 

@@ -68,7 +68,13 @@ async function cargarNoticias(numeroPagina) {
                     <h3 class="noticia-titulo">${noticia.titulo}</h3>
                     <h3 class="noticia-subtitulo">${noticia.subtitulo}</h3>
                     <p class="noticia-resumen">${contenido}</p>
-                    <p class="fecha-noticia">${noticia.fechaPublicacionString}</p>
+                    <div class="fecha-publicacion">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
+                        </svg>
+                        <p id="fecha-noticia-1" class="fecha-noticia">${noticia.fechaPublicacionString}</p>
+                    </div>
                     <div>
                         <a data-id="${index + 1}" class="enlace-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:5500/noticia.html?id=${noticia.identificador}">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50 50">

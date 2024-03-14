@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     fetch(`http://127.0.0.1:8080/noticia/noticiaPorLong/${idNoticia}`)
     .then(response => response.json())
     .then(data => {
-        var { titulo, subtitulo, contenido, fechaPublicacion } = data;
+        var { titulo, subtitulo, contenido, fechaPublicacionString } = data;
 
         const titleElement = document.querySelector(`#noticia-titulo`);
         const subtitleElement = document.querySelector(`#noticia-subtitulo`);
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
         titleElement.textContent = titulo;
         subtitleElement.textContent = subtitulo;
         contentElement.textContent = contenido;
-        fechaElement.textContent = fechaPublicacion;
+        fechaElement.textContent = fechaPublicacionString;
 
     })
     .catch(error => {
