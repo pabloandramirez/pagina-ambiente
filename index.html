@@ -539,24 +539,41 @@
     </div>
     <div class="contacto-container" id="contacto">
         <h1 class="contacto-titulo">CONTACTO</h1>
-        <form class="contacto-formulario-container" action="index.html" method="post">
-            <input class="asunto-input" type="text" placeholder="ASUNTO" name="asunto" maxlength="50" required>
+        <form id="mi-formulario" class="contacto-formulario-container" action="index.html" method="post">
+            <input id="asunto" class="asunto-input" type="text" placeholder="ASUNTO" name="asunto" maxlength="50" required>
             <div class="contacto-datos-container">
-                <input class="nombre-apellido-input contacto-datos" type="text" placeholder="NOMBRE Y APELLIDO" required 
+                <input id="nombre-apellido" class="nombre-apellido-input contacto-datos" type="text" placeholder="NOMBRE Y APELLIDO" required 
                 name="nombre-apellido" maxlength="25">
-                <input class="email-input contacto-datos" type="email" placeholder="E-MAIL" name="email" 
-                maxlength="25">
-                <input class="telefono-input contacto-datos" type="number" placeholder="TELEFONO" name="telefono"
-                id="telefono" required>
+                <input id="email" class="email-input contacto-datos" type="email" placeholder="E-MAIL" name="email" 
+                maxlength="50">
+                <input id="telefono" class="telefono-input contacto-datos" type="number" placeholder="TELEFONO" name="telefono"
+                required>
             </div>
             <div class="input-wrapper">
                 <textarea class="mensaje-input" name="mensaje" id="mensaje-contenido" rows="1" 
                 placeholder="MENSAJE"></textarea>
             </div>
-            <button class="boton-enviar" type="submit">ENVIAR</button>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                Launch static backdrop modal
+            <button class="boton-enviar" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                ENVIAR
             </button>
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        ...
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button id="understood-btn" type="submit" class="btn btn-primary">Understood</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </form>
         <div class="separador">
             / / / / / / / / / / / / / / / / / / / / / / / / / / / / /
@@ -571,7 +588,7 @@
     <footer class="footer-container">
         <div class="titulo-y-logo">
             <div class="logo-provincia">
-                <img src="img/Isologotipo_Gobierno-del-Chaco_AzulSinFondo_2x.png" alt="logo-provincia">
+                <img src="img/Isologotipo_Gobierno-del-Chaco_BlancoSinFondo_2x.png" alt="logo-provincia">
             </div>
             <div class="logo-provincia-2">
                 <img src="img/Iso_Gobierno-del-Chaco_SinFondo_1x.png" alt="logo-provincia-2">
@@ -589,7 +606,8 @@
             </div>
         </div>
     </footer>
-    <script src="js/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>

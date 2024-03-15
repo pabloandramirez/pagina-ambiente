@@ -106,7 +106,7 @@ var inputTelefono = document.getElementById('telefono');
 const input = document.getElementById("mensaje-contenido");
 const placeholder = document.getElementById("placeholder");
 
-input.addEventListener("input", function() {
+/*input.addEventListener("input", function() {
     const inputValue = this.value;
     const cursorPosition = this.selectionStart;
     
@@ -117,7 +117,7 @@ input.addEventListener("input", function() {
     
     // Mueve el cursor al principio del campo de entrada
     this.setSelectionRange(0, 0);
-});
+});*/
 
 document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener("scroll", function() {
@@ -141,6 +141,36 @@ document.addEventListener("DOMContentLoaded", function() {
       itemsNav.classList.toggle("active");
   });
 });
+
+//Control del boton de enviar consulta
+document.getElementById("understood-btn").addEventListener("click", function(event) {
+  // Evita que el formulario se envíe automáticamente
+  event.preventDefault();
+
+  // Verifica si todos los campos requeridos están completos
+  if (camposValidos()) {
+      // Si todos los campos están completos, muestra la ventana modal de confirmación
+      document.getElementById("mi-formulario").submit();
+  } else {
+      // Si faltan campos, muestra un mensaje de error o realiza alguna otra acción
+      alert("Por favor, complete todos los campos antes de enviar.");
+  }
+});
+
+function camposValidos() {
+  // Implementa la lógica para verificar si todos los campos requeridos están completos
+  // Retorna true si todos los campos están completos, de lo contrario, retorna false
+  // Por ejemplo:
+  var mensaje = document.getElementById("mensaje-contenido").value;
+  var asunto = document.getElementById("asunto").value;
+  var nombre = document.getElementById("nombre-apellido").value;
+  var email = document.getElementById("email").value;
+  // Verifica si los campos no están vacíos
+  if (nombre.trim() === '' || email.trim() === '' || asunto.trim() === '' || mensaje.trim() === '') {
+      return false;
+  }
+  return true;
+}
 
 
 //Get the button
