@@ -80,6 +80,8 @@ body{
 
 .contenedor-linea-vertical{
     margin: 0px 20px;
+    width: 3px;
+    background-color: #5A5A5A;
 }
 
 .titulo_subse{
@@ -88,12 +90,13 @@ body{
     align-self: center;
     font-family: "Kanit", sans-serif;
     line-height: 20px;
-    line-height: 20px;
 }
 
 .titulo_subse h3{
     padding: 0;
     margin: 0;
+    font-weight: 400;
+    font-style: normal;
 }
 
 #nav-bar{
@@ -361,7 +364,7 @@ button{
 .normativas-container{
     position: relative;
     width: 100%;
-    height: 500px; /* O cualquier altura que desees */
+    height: auto; /* O cualquier altura que desees */
     background-color: #063565;
     color: #fff; /* Cambia el color del texto para que sea legible */
     padding: 10px 0; /* Ajusta el espaciado superior para que el texto no esté pegado al borde superior */
@@ -790,12 +793,19 @@ input[type=number] {
     align-self: center;
     font-family: "Kanit", sans-serif;
     line-height: 20px;
-    line-height: 20px;
 }
 
 .titulo_subse_footer h3{
     padding: 0;
     margin: 0;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.contenedor-linea-vertical-footer{
+    margin: 0px 20px;
+    width: 3px;
+    background-color: #fff;
 }
 
 #btn-back-to-top {
