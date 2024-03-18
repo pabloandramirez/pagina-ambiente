@@ -106,19 +106,6 @@ var inputTelefono = document.getElementById('telefono');
 const input = document.getElementById("mensaje-contenido");
 const placeholder = document.getElementById("placeholder");
 
-/*input.addEventListener("input", function() {
-    const inputValue = this.value;
-    const cursorPosition = this.selectionStart;
-    
-    const beforeCursor = inputValue.substring(0, cursorPosition);
-    const afterCursor = inputValue.substring(cursorPosition);
-    
-    placeholder.textContent = beforeCursor; // Alinea el placeholder con el texto antes del cursor
-    
-    // Mueve el cursor al principio del campo de entrada
-    this.setSelectionRange(0, 0);
-});*/
-
 document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener("scroll", function() {
       var barraNavegacion = document.getElementById("nav-bar");
@@ -175,10 +162,11 @@ document.getElementById("understood-btn").addEventListener("click", function(eve
           // Verificar si la solicitud fue exitosa
           if (response.ok) {
               $('#staticBackdrop').modal('hide');
+              $('#staticBackdrop2').modal('show');
               // Mostrar la ventana modal de confirmación
               setTimeout(function() {
                 window.location.reload();
-              }, 1000); // ajusta el tiempo según sea necesario
+              }, 2000); // ajusta el tiempo según sea necesario
           } else {
               // Manejar el caso de error
               throw new Error('Hubo un problema al enviar el formulario.');
