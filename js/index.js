@@ -142,6 +142,8 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+
+
 //Control del boton de enviar consulta
 document.getElementById("understood-btn").addEventListener("click", function(event) {
   // Evita que el formulario se envíe automáticamente
@@ -149,24 +151,52 @@ document.getElementById("understood-btn").addEventListener("click", function(eve
 
   // Verifica si todos los campos requeridos están completos
   if (camposValidos()) {
-      // Si todos los campos están completos, muestra la ventana modal de confirmación
-      document.getElementById("mi-formulario").submit();
+      const formData = new FormData(document.getElementById("mi-formulario"));
+
+      const formDataJSON = {
+        asunto: formData.get('asunto'),
+        nombreYApellido: formData.get('nombreYApellido'),
+        email: formData.get('email'),
+        telefono: formData.get('telefono'),
+        mensaje: formData.get('mensaje')
+      };
+
+      console.log(formDataJSON);
+
+      fetch("http://127.0.0.1:8080/contacto", {
+          method: "POST",
+          mode: "cors",
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify(formDataJSON)
+      })
+      .then(response => {
+          // Verificar si la solicitud fue exitosa
+          if (response.ok) {
+              $('#staticBackdrop').modal('hide');
+              // Mostrar la ventana modal de confirmación
+              setTimeout(function() {
+                window.location.reload();
+              }, 1000); // ajusta el tiempo según sea necesario
+          } else {
+              // Manejar el caso de error
+              throw new Error('Hubo un problema al enviar el formulario.');
+          }
+      });
   } else {
       // Si faltan campos, muestra un mensaje de error o realiza alguna otra acción
-      alert("Por favor, complete todos los campos antes de enviar.");
+      alert("Por favor, complete los campos obligatorios antes de enviar.");
   }
 });
 
 function camposValidos() {
-  // Implementa la lógica para verificar si todos los campos requeridos están completos
-  // Retorna true si todos los campos están completos, de lo contrario, retorna false
-  // Por ejemplo:
   var mensaje = document.getElementById("mensaje-contenido").value;
   var asunto = document.getElementById("asunto").value;
   var nombre = document.getElementById("nombre-apellido").value;
-  var email = document.getElementById("email").value;
+  var telefono = document.getElementById("telefono").value;
   // Verifica si los campos no están vacíos
-  if (nombre.trim() === '' || email.trim() === '' || asunto.trim() === '' || mensaje.trim() === '') {
+  if (nombre.trim() === '' || telefono.trim() === '' || asunto.trim() === '' || mensaje.trim() === '') {
       return false;
   }
   return true;

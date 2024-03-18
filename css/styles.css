@@ -823,6 +823,7 @@ button{
     font-size: 100%;
     font-weight: bold;
     font-family: "Manrope", sans-serif;
+    border-radius: 10px;
 }
 
 /* Ocultar las flechas de incremento y decremento en campos de tipo number */
@@ -849,6 +850,7 @@ input[type=number] {
     font-size: 100%;
     font-weight: bold;
     font-family: "Manrope", sans-serif;
+    border-radius: 10px;
 }
 
 .input-wrapper {
@@ -867,6 +869,7 @@ input[type=number] {
     resize: none; /* Evita que el textarea sea redimensionable */
     overflow-y: auto; /* Añade barra de desplazamiento vertical si es necesario */
     font-family: "Manrope", sans-serif;
+    border-radius: 10px;
 }
 
 .mensaje-input::placeholder{
@@ -878,6 +881,11 @@ input[type=number] {
 
 .mensaje-input:focus + .placeholder {
     display: none; /* Oculta el placeholder cuando el input está enfocado */
+}
+
+.asterisco-obligatorio{
+    font-family: "Manrope", sans-serif;
+    margin: 25px 0 0;
 }
 
 .boton-enviar{
@@ -987,6 +995,7 @@ background-clip: padding-box;
 border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
 border-radius: var(--bs-modal-border-radius);
 outline: 0;
+background-color: #859546;
 }
 .modal-backdrop {
 --bs-backdrop-zindex: 1050;
@@ -1014,6 +1023,7 @@ justify-content: space-between;
 padding: var(--bs-modal-header-padding);
 border-top-left-radius: var(--bs-modal-inner-border-radius);
 border-top-right-radius: var(--bs-modal-inner-border-radius);
+color: #fff;
 }
 .modal-header .btn-close {
     padding: calc(var(--bs-modal-header-padding-y) * 0.1)
@@ -1021,6 +1031,7 @@ border-top-right-radius: var(--bs-modal-inner-border-radius);
     margin: calc(-0.5 * var(--bs-modal-header-padding-y))
         calc(-0.5 * var(--bs-modal-header-padding-x))
         calc(-0.5 * var(--bs-modal-header-padding-y)) auto;
+        font-weight: bold;
 }
 .modal-title {
     margin-bottom: 0;
@@ -1032,6 +1043,7 @@ border-top-right-radius: var(--bs-modal-inner-border-radius);
     flex: 1 1 auto;
     padding: var(--bs-modal-padding);
     font-family: "Manrope", sans-serif;
+    color: #fff;
 }
 .modal-footer {
 display: flex;
@@ -1046,7 +1058,10 @@ border-bottom-left-radius: var(--bs-modal-inner-border-radius);
 }
 .modal-footer > * {
 margin: calc(var(--bs-modal-footer-gap) * 0.5);
+font-family: "Manrope", sans-serif;
+font-weight: 600;
 }
+
 @media (min-width: 576px) {
 .modal {
     --bs-modal-margin: 1.75rem;

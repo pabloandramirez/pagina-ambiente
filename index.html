@@ -539,20 +539,25 @@
     </div>
     <div class="contacto-container" id="contacto">
         <h1 class="contacto-titulo">CONTACTO</h1>
-        <form id="mi-formulario" class="contacto-formulario-container" action="index.html" method="post">
+        <form id="mi-formulario" class="contacto-formulario-container" action="http://127.0.0.1:8080/contacto" method="post">
+            <p class="asterisco-obligatorio">(*)</p>
             <input id="asunto" class="asunto-input" type="text" placeholder="ASUNTO" name="asunto" maxlength="50" required>
             <div class="contacto-datos-container">
+                <p class="asterisco-obligatorio">(*)</p>
                 <input id="nombre-apellido" class="nombre-apellido-input contacto-datos" type="text" placeholder="NOMBRE Y APELLIDO" required 
-                name="nombre-apellido" maxlength="25">
+                name="nombreYApellido" maxlength="25">
                 <input id="email" class="email-input contacto-datos" type="email" placeholder="E-MAIL" name="email" 
                 maxlength="50">
+                <p class="asterisco-obligatorio">(*)</p>
                 <input id="telefono" class="telefono-input contacto-datos" type="number" placeholder="TELEFONO" name="telefono"
                 required>
             </div>
             <div class="input-wrapper">
+                <p class="asterisco-obligatorio">(*)</p>
                 <textarea class="mensaje-input" name="mensaje" id="mensaje-contenido" rows="1" 
                 placeholder="MENSAJE"></textarea>
             </div>
+            <p class="asterisco-obligatorio">(*) Campos Obligatorios</p>
             <button class="boton-enviar" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 ENVIAR
             </button>
@@ -561,15 +566,15 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Enviar Consulta</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
                         </div>
                         <div class="modal-body">
-                        ...
+                        Su consulta será respondida en las próximas 48 hs hábiles. Gracias por su paciencia
                         </div>
                         <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button id="understood-btn" type="submit" class="btn btn-primary">Understood</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button id="understood-btn" type="submit" class="btn btn-primary">Enviar</button>
                         </div>
                     </div>
                 </div>
@@ -608,6 +613,6 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/index.js"></script>
+    <script type="module" src="js/index.js"></script>
 </body>
 </html>
