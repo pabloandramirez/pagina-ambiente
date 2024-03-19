@@ -136,7 +136,7 @@ body{
 
 .cabecero {
     position: relative;
-    background: linear-gradient(to right, #063565 0%, #5059bc 100%);
+    background: #063565;
     display: flex;
     align-items: center; /* Alinea los elementos verticalmente */
     justify-content: space-between; /* Alinea los elementos a la derecha */
@@ -147,7 +147,7 @@ body{
 
 .bandera {
     margin-left: 10%;
-    width: 350px;
+    width: 250px;
     height: 90px;
     /*background: linear-gradient(to bottom, #1F93BC 0%,#2595D4 33%, white 33%, white 66%, #4BA32A 66%, green 100%);*/
     background: linear-gradient(to right, green 0%, #4BA32A 33%, white 33%, white 66%, #1F93BC 66%,#2595D4 100%);
@@ -197,8 +197,13 @@ body{
     margin-left: 12%;
 }
 
+.logo-provincia{
+    display: flex;
+    align-items: center;
+}
+
 .logo-provincia img{
-    width: 225px;
+    width: 150px;
 }
 
 .logo-provincia-2{
@@ -206,8 +211,8 @@ body{
 }
 
 .contenedor-linea-vertical{
-    margin: 0px 20px;
-    width: 3px;
+    margin: 0px 5px;
+    width: 1px;
     background-color: #5A5A5A;
 }
 
@@ -217,6 +222,7 @@ body{
     align-self: center;
     font-family: "Kanit", sans-serif;
     line-height: 20px;
+    font-size: small;
 }
 
 .titulo_subse h3{
@@ -250,7 +256,7 @@ body{
     list-style: none;
     display: flex;
     justify-content: center;
-    background: linear-gradient(to right, #063565 0%, #5059bc 100%);
+    background: #063565;;
     margin: 0;
     padding: 5px 0;
     font-family: "Kanit", sans-serif;
@@ -1228,6 +1234,7 @@ overflow-y: auto;
     align-self: center;
     font-family: "Kanit", sans-serif;
     line-height: 20px;
+    font-size: small;
 }
 
 .titulo_subse_footer h3{
@@ -1238,8 +1245,8 @@ overflow-y: auto;
 }
 
 .contenedor-linea-vertical-footer{
-    margin: 0px 20px;
-    width: 3px;
+    margin: 0px 5px;
+    width: 1px;
     background-color: #fff;
 }
 
@@ -1256,17 +1263,25 @@ overflow-y: auto;
         display: flex;
     }
 
+    .cabecero a{
+        margin-right: 20px;
+    }
+
     .bandera{
         display: none;
     }
 
     .contacto{
-        background: linear-gradient(to right, #063565 0%, #5059bc 100%);
+        background: #063565;;
         position: fixed; 
         width: 100%;
         z-index: 20;  
         margin: 0;
         justify-content: space-between;
+    }
+
+    .contenedor{
+        height: 30px;
     }
 
     .logo-mail{
@@ -1284,14 +1299,16 @@ overflow-y: auto;
 
     .logo-provincia-2{
         display: flex;
+        align-items: center;
     }
 
     .logo-provincia-2 img{
-        width: 70px;
+        width: 35px;
     }
 
     .titulo_subse{
-        line-height: 18px;
+        line-height: 9px;
+        font-size: xx-small;
     }
 
     .contenedor-linea-vertical{
@@ -1436,5 +1453,14 @@ overflow-y: auto;
 
     .mensaje-input{
         margin-top: 5px;
+    }
+
+    .footer-container{
+        height: 30px;
+    }
+
+    .titulo_subse_footer{
+        line-height: 9px;
+        font-size: xx-small;
     }
 }

@@ -1,0 +1,39 @@
+.proteccion-container{
+    background: #8a9a46;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    color: white;
+}
+
+.volver-inicio{
+    display: flex;
+    align-items: center;
+    margin: 0 25px;
+}
+
+.volver-titulo{
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    align-self: center;
+    margin-left: 10px;
+    font-size: 100%;
+}
+
+#proteccion-titulo{
+  text-align: center;
+  margin: 0 auto 10px;
+}
+
+@media (max-width: 768px){
+.contacto {
+    background: #063565;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+    margin: 0;
+    height: 50px;
+    }
+}

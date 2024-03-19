@@ -266,13 +266,13 @@ nav{
     }
 
     .contacto{
-        background: linear-gradient(to right, #063565 0%, #5059bc 100%);
+        background: #063565;
         justify-content: center;
         position: fixed; 
         width: 100%;
         z-index: 20;  
         margin: 0;
-        height: 75px;
+        height: 50px;
     }
     
     .menu-icon {
