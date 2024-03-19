@@ -64,6 +64,10 @@
     font-size: 90%;
 }
 
+.boton-ver-mas:hover{
+    background: #f26df9;
+}
+
 
 .footer-container{
     padding: 50px 0;
