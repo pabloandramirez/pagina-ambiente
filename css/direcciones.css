@@ -1,4 +1,4 @@
-.proteccion-container{
+.direccion-container{
     background: #8a9a46;
     margin: 0;
     position: relative;
@@ -21,7 +21,7 @@
     font-size: 100%;
 }
 
-#proteccion-titulo{
+#direccion-titulo{
   text-align: center;
   margin: 0 auto 10px;
 }

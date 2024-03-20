@@ -818,7 +818,7 @@ button{
 }
 
 .contacto-formulario-container{
-    margin: 50px;
+    margin: 50px 50px 25px;
     display: grid;
 }
 
@@ -1215,10 +1215,14 @@ overflow-y: auto;
 .separador{
     font-size: 300%;
     color: #5BAB3D;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    overflow-x: hidden; /* Oculta el desbordamiento horizontal */
+    white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
+}
+
+.separador p{
+    margin: 0;
 }
 
 .footer-container{
