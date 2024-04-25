@@ -2,6 +2,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const idNoticia = urlParams.get('id');
 
 document.addEventListener("DOMContentLoaded", function() {
+    mostrarCargando();
     fetch(`http://127.0.0.1:8080/noticia/noticiaPorLong/${idNoticia}`)
     .then(response => response.json())
     .then(data => {
@@ -17,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
         contentElement.textContent = contenido;
         fechaElement.textContent = fechaPublicacionString;
 
+        ocultarCargando();
     })
     .catch(error => {
         console.error('Hubo un error al obtener los datos:', error);
@@ -89,3 +91,17 @@ async function cargarCarousel() {
 
 // Llamar a la función para cargar el carousel al cargar la página
 window.addEventListener('load', cargarCarousel);
+
+function mostrarCargando() {
+    const cargando = document.querySelector('.cargando');
+    cargando.style.display = 'block';
+}
+  
+  function ocultarCargando() {
+    const cargando = document.querySelector('.cargando');
+    cargando.style.opacity = 0;
+    setTimeout(() => {
+        cargando.style.display = 'none';
+        cargando.style.opacity = 1; // Restaurar la opacidad por si se vuelve a mostrar
+    }, 500); // Ajusta el tiempo según la duración de tu transición CSS
+}

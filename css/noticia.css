@@ -30,6 +30,10 @@
     font-size: 100%;
 }
 
+.noticia-container{
+    position: relative;
+}
+
 #noticia-titulo{
     font-family: "Kanit", sans-serif;
     text-align: center;

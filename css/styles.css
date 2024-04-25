@@ -1245,7 +1245,8 @@ overflow-y: auto;
 }
 
 .footer-container{
-    display: flex;
+    position: relative;
+    display: block;
     padding: 25px 0;
     background-color: #5A5A5A;
     height: 70px;

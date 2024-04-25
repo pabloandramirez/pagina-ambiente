@@ -51,6 +51,7 @@ document.getElementById('pagination').addEventListener('click', function(event) 
 
 async function cargarNoticias(numeroPagina) {
     try {
+        mostrarCargando();
         const apiUrl = `${apiUrlBase}?pagina=${numeroPagina}&noticiasPorPagina=${noticiasPorPagina}`;
         const response = await fetch(apiUrl);
         const data = await response.json();
@@ -102,6 +103,8 @@ async function cargarNoticias(numeroPagina) {
         });
 
         updatePagination(); // Actualizar la paginación después de cargar las noticias
+
+        ocultarCargando();
 
         return Promise.resolve(); // Promesa resuelta para indicar que la carga de noticias se completó correctamente
     } catch (error) {
@@ -207,3 +210,16 @@ function backToTop() {
 }
 
 
+function mostrarCargando() {
+    const cargando = document.querySelector('.cargando');
+    cargando.style.display = 'block';
+}
+  
+  function ocultarCargando() {
+    const cargando = document.querySelector('.cargando');
+    cargando.style.opacity = 0;
+    setTimeout(() => {
+        cargando.style.display = 'none';
+        cargando.style.opacity = 1; // Restaurar la opacidad por si se vuelve a mostrar
+    }, 500); // Ajusta el tiempo según la duración de tu transición CSS
+}
