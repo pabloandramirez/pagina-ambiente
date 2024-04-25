@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function() {
   fetch('http://127.0.0.1:8080/noticia/')
   .then(response => response.json())
   .then(data => {
+      console.log('muestra cargando');
+      mostrarCargando();
       // Filtrar los primeros 4 resultados
       const primerosResultados = data.slice(0, 4);
 
@@ -45,6 +47,8 @@ document.addEventListener("DOMContentLoaded", function() {
           }
 
       });
+      ocultarCargando();
+      console.log('oculta cargando');
   })
   .catch(error => {
       console.error('Hubo un error al obtener los datos:', error);
@@ -226,4 +230,18 @@ function backToTop() {
   /*document.body.scrollTop = 0;
   behavior: 'smooth' // Desplazamiento suave
   document.documentElement.scrollTop = 0;*/
+}
+
+function mostrarCargando() {
+  const cargando = document.querySelector('.cargando');
+  cargando.style.display = 'block';
+}
+
+function ocultarCargando() {
+  const cargando = document.querySelector('.cargando');
+  cargando.style.opacity = 0;
+  setTimeout(() => {
+      cargando.style.display = 'none';
+      cargando.style.opacity = 1; // Restaurar la opacidad por si se vuelve a mostrar
+  }, 500); // Ajusta el tiempo según la duración de tu transición CSS
 }

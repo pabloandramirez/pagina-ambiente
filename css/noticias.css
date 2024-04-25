@@ -146,8 +146,7 @@
 
 #noticias-titulo{
   text-align: center;
-  margin-left: calc(40vw - 106px);
-  margin-right: auto;
+  margin: auto;
 }
 
 /*Paginacion*/

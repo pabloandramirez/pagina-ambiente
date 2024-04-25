@@ -31,14 +31,14 @@
 }
 
 #noticia-titulo{
-    font-family: "Manrope", sans-serif;
+    font-family: "Kanit", sans-serif;
     text-align: center;
     margin: 25px 0;
     color: #31363F;
 }
 
 #noticia-subtitulo{
-    font-family: "Kanit", sans-serif;
+    font-family: "Manrope", sans-serif;
     text-align: center;
     margin: 0 150px;
     font-size: 150%;
@@ -50,7 +50,7 @@
 }
 
 #noticia-contenido{
-    font-family: "Kanit", sans-serif;
+    font-family: "Manrope", sans-serif;
     text-align: justify;
     margin: 0 150px;
     font-size: 100%;
@@ -58,7 +58,7 @@
 }
 
 #fechaPublicacion{
-    font-family: "Kanit", sans-serif;
+    font-family: "Manrope", sans-serif;
     text-align: left;
     margin-left: 150px;
     font-size: 90%;
@@ -99,6 +99,10 @@
 
     .bd-example-snippet{
         margin: 0 30px;
+    }
+
+    .carousel-indicators{
+        display: none;
     }
 
     #noticia-contenido{
