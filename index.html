@@ -436,6 +436,7 @@
                             <h3 id="noticia-subtitulo-1" class="noticia-subtitulo">Subtitulo</h3>
                             <p id="noticia-resumen-1" class="noticia-resumen">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                                 Aenean commodo ligula eget dolor.</p>
+                            <div class="pie-noticia">
                                 <div class="fecha-publicacion">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
                                         <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
@@ -455,6 +456,7 @@
                                         </svg>
                                     </a>
                                 </div>
+                            </div>
                         </a>
                     </li>
                     <li class="noticia-card">
@@ -462,8 +464,9 @@
                             <img id="imagen-noticia-2" src="https://objectstorage.sa-saopaulo-1.oraclecloud.com/n/grsetqhe5zti/b/cubo-prueba/o/imagen-ambiente2ambiente3.jpg" alt="noticia-imagen" class="noticia-imagen">
                             <h3 id="noticia-titulo-2" class="noticia-titulo">TITULO</h3>
                             <h3 id="noticia-subtitulo-2" class="noticia-subtitulo">Subtitulo</h3>
-                            <p id="noticia-resumen-2" class="noticia-resumen">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                Aenean commodo ligula eget dolor.</p>
+                            <div class="pie-noticia">
+                                <p id="noticia-resumen-2" class="noticia-resumen">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                    Aenean commodo ligula eget dolor.</p>
                                 <div class="fecha-publicacion">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
                                         <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
@@ -483,6 +486,7 @@
                                         </svg>
                                     </a>
                                 </div>
+                            </div>
                         </a>
                     </li>
                     <li class="noticia-card">
@@ -490,8 +494,9 @@
                             <img id="imagen-noticia-3" src="https://objectstorage.sa-saopaulo-1.oraclecloud.com/n/grsetqhe5zti/b/cubo-prueba/o/imagen-ambiente-3ambiente2.jpg" alt="noticia-imagen" class="noticia-imagen">
                             <h3 id="noticia-titulo-3" class="noticia-titulo">TITULO</h3>
                             <h3 id="noticia-subtitulo-3" class="noticia-subtitulo">Subtitulo</h3>
-                            <p id="noticia-resumen-3" class="noticia-resumen">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                Aenean commodo ligula eget dolor.</p>
+                            <div class="pie-noticia">
+                                <p id="noticia-resumen-3" class="noticia-resumen">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                    Aenean commodo ligula eget dolor.</p>
                                 <div class="fecha-publicacion">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
                                         <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
@@ -511,15 +516,17 @@
                                         </svg>
                                     </a>
                                 </div>
-                            </a>
+                            </div>
+                        </a>
                     </li>
                     <li class="noticia-card">
                         <a data-id="4" id="enlace-noticia-4" class="enlace-noticia" href>
                             <img id="imagen-noticia-4" src="https://objectstorage.sa-saopaulo-1.oraclecloud.com/n/grsetqhe5zti/b/cubo-prueba/o/imagen-ambiente-4ambiente1.jpg" alt="noticia-imagen" class="noticia-imagen">
                             <h3 id="noticia-titulo-4" class="noticia-titulo">TITULO</h3>
                             <h3 id="noticia-subtitulo-4" class="noticia-subtitulo">Subtitulo</h3>
-                            <p id="noticia-resumen-4" class="noticia-resumen">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                Aenean commodo ligula eget dolor.</p>
+                            <div class="pie-noticia">
+                                <p id="noticia-resumen-4" class="noticia-resumen">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                    Aenean commodo ligula eget dolor.</p>
                                 <div class="fecha-publicacion">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
                                         <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
@@ -539,6 +546,7 @@
                                         </svg>
                                     </a>
                                 </div>
+                            </div>
                         </a>
                     </li>
             </ul>
@@ -554,22 +562,34 @@
     <div class="contacto-container" id="contacto">
         <h1 class="contacto-titulo">CONTACTO</h1>
         <form id="mi-formulario" class="contacto-formulario-container" action="http://127.0.0.1:8080/contacto" method="post">
-            <p class="asterisco-obligatorio">(*)</p>
-            <input id="asunto" class="asunto-input" type="text" placeholder="ASUNTO" name="asunto" maxlength="50" required>
-            <div class="contacto-datos-container">
-                <p class="asterisco-obligatorio">(*)</p>
-                <input id="nombre-apellido" class="nombre-apellido-input contacto-datos" type="text" placeholder="NOMBRE Y APELLIDO" required 
-                name="nombreYApellido" maxlength="25">
-                <input id="email" class="email-input contacto-datos" type="email" placeholder="E-MAIL" name="email" 
-                maxlength="50">
-                <p class="asterisco-obligatorio">(*)</p>
-                <input id="telefono" class="telefono-input contacto-datos" type="number" placeholder="TELEFONO" name="telefono"
-                required>
+            <div class="form-group">
+                <small class="asterisco-obligatorio">(*)</small>
+                <input id="asunto" class="asunto-input form-control" type="text" placeholder="ASUNTO" name="asunto" maxlength="50" required>
+                <small class="form-text text-muted" style="font-family: 'Kanit', sans-serif;">0 caracteres restantes</small>
             </div>
-            <div class="input-wrapper">
-                <p class="asterisco-obligatorio">(*)</p>
-                <textarea class="mensaje-input" name="mensaje" id="mensaje-contenido" rows="1" 
-                placeholder="MENSAJE"></textarea>
+            <div class="contacto-datos-container">
+                <div class="nombre-apellido-container form-group">
+                    <small class="asterisco-obligatorio">(*)</small>
+                    <input id="nombre-apellido" class="nombre-apellido-input contacto-datos form-control" type="text" placeholder="NOMBRE Y APELLIDO" required 
+                    name="nombreYApellido" maxlength="50" style="margin: 0;">
+                    <small class="form-text text-muted" style="font-family: 'Kanit', sans-serif;">0 caracteres restantes</small>
+                </div>
+                <div class="email-container">
+                    <small class="asterisco-obligatorio" style="margin-top: 43px;"></small>
+                    <input id="email" class="email-input contacto-datos" type="email" placeholder="E-MAIL" name="email" 
+                    maxlength="50">
+                </div>
+                <div class="telefono-container">
+                    <small class="asterisco-obligatorio">(*)</small>
+                    <input id="telefono" class="telefono-input contacto-datos" type="number" placeholder="TELEFONO" name="telefono"
+                    maxlength="50" required>
+                </div>
+            </div>
+            <div class="input-wrapper form-group">
+                <small class="asterisco-obligatorio">(*)</small>
+                <textarea class="mensaje-input form-control" name="mensaje" id="mensaje-contenido" rows="1" 
+                placeholder="MENSAJE" maxlength="500"></textarea>
+                <small class="form-text text-muted" style="font-family: 'Kanit', sans-serif;">0 caracteres restantes</small>
             </div>
             <p class="asterisco-obligatorio">(*) Campos Obligatorios</p>
             <button class="boton-enviar" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">

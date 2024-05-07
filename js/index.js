@@ -245,3 +245,38 @@ function ocultarCargando() {
       cargando.style.opacity = 1; // Restaurar la opacidad por si se vuelve a mostrar
   }, 500); // Ajusta el tiempo según la duración de tu transición CSS
 }
+
+function markRequired() {
+  var control = $(this).children(".form-control");
+  var label = $(this).children("label");
+  if (control.attr("required") == "required") {
+      label.addClass("required");
+  }
+}
+
+function countCharacters() {
+  var max = $(this).attr("maxlength");
+  var length = $(this).val().length;
+  var counter = max - length;
+  var helper = $(this).next(".form-text");
+  // Switch to the singular if there's exactly 1 character remaining
+  if (counter !== 1) {
+      helper.text(counter + " characters remaining");
+  } else {
+      helper.text(counter + " character remaining");
+  }
+  // Make it red if there are 0 characters remaining
+  if (counter === 0) {
+      helper.removeClass("text-muted");
+      helper.addClass("text-danger");
+  } else {
+      helper.removeClass("text-danger");
+      helper.addClass("text-muted");
+  }
+}
+
+$(document).ready(function () {
+  $(".form-group").each(markRequired);
+  $(".form-control").each(countCharacters);
+  $(".form-control").keyup(countCharacters);
+});

@@ -734,7 +734,6 @@ button{
     color: #000000;
     display: grid;
     width: 250px;
-    height: 100%;
     background-color:#fff;
     padding: 10px;
     margin: 10px 10px;
@@ -770,6 +769,17 @@ button{
 
 .noticia-resumen{
     font-family: "Manrope", sans-serif;
+}
+
+.noticia-titulo,
+.noticia-subtitulo,
+.noticia-resumen {
+  max-height: 100px; /* Establece una altura máxima */
+  overflow: hidden; /* Oculta el contenido que se desborde */
+}
+
+.pie-noticia{
+    align-content: end;
 }
 
 .fecha-publicacion{
@@ -827,6 +837,7 @@ button{
     background: #8a9a46;
     padding: 10px 0;
     margin: 0;
+    display: grid;
 }
 
 .contacto-titulo{
@@ -837,8 +848,11 @@ button{
 }
 
 .contacto-formulario-container{
-    margin: 50px 50px 25px;
+    justify-content: center;
+    width: 75%;
+    margin: 0 50px 25px;
     display: grid;
+    justify-self: center;
 }
 
 .asunto-input{
@@ -868,9 +882,14 @@ input[type=number] {
     justify-content: space-between;
 }
 
+.nombre-apellido-container, .email-container, .telefono-container{
+    display: grid;
+}
+
 .contacto-datos{
-    margin: 20px 0;
-    width: 28%;
+    height: fit-content;
+    margin: 0 0 20px;
+    width: auto;
     padding: 15px;
     font-size: 100%;
     font-weight: bold;
@@ -879,6 +898,7 @@ input[type=number] {
 }
 
 .input-wrapper {
+    margin-top: 30px;
     position: relative;
     width: 100%;
     height: auto;
