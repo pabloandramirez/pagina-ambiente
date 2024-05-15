@@ -5,7 +5,8 @@ const previousPageBtn = document.getElementById('previous-page');
 const nextPageBtn = document.getElementById('next-page');
 const firstPageBtn = document.getElementById('first-page');
 const lastPageBtn = document.getElementById('last-page');
-let totalPages = 0;
+let totalPages = 1;
+let paginaActual = 1;
 
 
 window.addEventListener('load', function() {
@@ -14,7 +15,6 @@ window.addEventListener('load', function() {
         .catch(error => console.error('Error al cargar las noticias:', error));
 });
 
-let paginaActual = 1;
 
 document.getElementById('pagination').addEventListener('click', function(event) {
     if (event.target.tagName === 'A' && !event.target.classList.contains('page-link-disabled')) {
@@ -122,17 +122,21 @@ function updatePagination() {
     });
     // Actualizar el estado de los botones de página anterior y siguiente
     // según la página actual y el número total de páginas
-    if (paginaActual === 1) {
+    if (paginaActual === totalPages && paginaActual === 1) {
+        nextPageBtn.parentElement.style.display = 'none';
+        lastPageBtn.parentElement.style.display = 'none';
         previousPageBtn.parentElement.style.display = 'none';
         firstPageBtn.parentElement.style.display = 'none';
-        nextPageBtn.parentElement.style.display = 'list-item';
-        lastPageBtn.parentElement.style.display = 'list-item';
       } else if(paginaActual === totalPages) {
-        /*nextPageBtn.parentElement.classList.add('disabled');*/
         nextPageBtn.parentElement.style.display = 'none';
         lastPageBtn.parentElement.style.display = 'none';
         previousPageBtn.parentElement.style.display = 'list-item';
         firstPageBtn.parentElement.style.display = 'list-item';
+      } else if(paginaActual === 1) {
+        previousPageBtn.parentElement.style.display = 'none';
+        firstPageBtn.parentElement.style.display = 'none';
+        nextPageBtn.parentElement.style.display = 'list-item';
+        lastPageBtn.parentElement.style.display = 'list-item';
       } else {
         previousPageBtn.parentElement.style.display = 'list-item';
         nextPageBtn.parentElement.style.display = 'list-item';

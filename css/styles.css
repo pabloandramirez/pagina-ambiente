@@ -776,6 +776,7 @@ button{
 .noticia-resumen {
   max-height: 100px; /* Establece una altura máxima */
   overflow: hidden; /* Oculta el contenido que se desborde */
+  height: 4rem;
 }
 
 .pie-noticia{
@@ -870,6 +871,7 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
+    display: none;
 }
 
 input[type=number] {
