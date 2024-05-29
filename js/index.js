@@ -55,28 +55,6 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-
-      const targetId = this.getAttribute('href').substring(1);
-      const targetElement = document.getElementById(targetId);
-
-      if (targetElement) {
-        let offset = 0 // Desplazamiento de 75px hacia arriba
-        
-        if(window.innerWidth <= 768){
-          offset += 50;
-        }
-        window.scrollTo({
-          top: targetElement.offsetTop - offset, // Posición de desplazamiento
-          behavior: 'smooth' // Desplazamiento suave
-        });
-
-        document.getElementById('items-nav').className = 'items-nav';
-      }
-    });
-  });
 
 var selectElement = document.getElementById('select-opciones');
 var hiddenInputElement = document.getElementById('input-categoria');
@@ -123,13 +101,37 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+var menuIcon = document.getElementById("hamburger");
+var sidebar = document.getElementById("sidebar");
 
 document.addEventListener("DOMContentLoaded", function() {
-  var menuIcon = document.querySelector(".menu-icon");
-  var itemsNav = document.querySelector(".items-nav");
+  menuIcon.addEventListener('click', function(e) {
+      menuIcon.classList.toggle("open");
+      sidebar.classList.toggle("active");
+  });
+});
 
-  menuIcon.addEventListener("click", function() {
-      itemsNav.classList.toggle("active");
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      let offset = 0 // Desplazamiento de 75px hacia arriba
+      
+      if(window.innerWidth <= 768){
+        offset += 50;
+      }
+      window.scrollTo({
+        top: targetElement.offsetTop - offset, // Posición de desplazamiento
+        behavior: 'smooth' // Desplazamiento suave
+      });
+
+      document.getElementById('sidebar').className = 'sidebar list-unstyled';
+      menuIcon.classList.toggle("open");
+    }
   });
 });
 
