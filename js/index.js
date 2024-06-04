@@ -1,7 +1,12 @@
-document.addEventListener("DOMContentLoaded", function() {
-  fetch('http://127.0.0.1:8080/noticia/')
-  .then(response => response.json())
-  .then(data => {
+document.addEventListener("DOMContentLoaded", function(){
+  cargarNoticias();
+} );
+
+async function cargarNoticias() {
+  try{
+    await fetch('http://127.0.0.1:8080/noticia/')
+    .then(response => response.json())
+    .then(data => {
       console.log('muestra cargando');
       mostrarCargando();
       // Filtrar los primeros 4 resultados
@@ -53,7 +58,12 @@ document.addEventListener("DOMContentLoaded", function() {
   .catch(error => {
       console.error('Hubo un error al obtener los datos:', error);
   });
-});
+
+  return Promise.resolve();
+  } catch (error) {
+    return Promise.reject(error); // Rechazar la promesa en caso de error
+  }
+}
 
 
 var selectElement = document.getElementById('select-opciones');
@@ -71,12 +81,12 @@ var selectElement2 = document.getElementById('select-opciones-2');
 var hiddenInputElement2 = document.getElementById('input-categoria-2');
 
 // Establecer el valor predeterminado del campo oculto al valor seleccionado por defecto
-hiddenInputElement2.value = selectElement2.value;
+// hiddenInputElement2.value = selectElement2.value;
 
 // Escuchar el evento de cambio en el select
-selectElement2.addEventListener('change', function() {
-  hiddenInputElement2.value = this.value;
-});
+// selectElement2.addEventListener('change', function() {
+//   hiddenInputElement2.value = this.value;
+// });
 
 var inputTelefono = document.getElementById('telefono');
     inputTelefono.addEventListener('input', function() {
