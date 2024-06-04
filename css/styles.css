@@ -635,7 +635,7 @@ button{
 .voluntariado-container{
     background: radial-gradient(circle at center,#DDDDDE 0%, #797677 100%);
     width: 100%;
-    height: 240px;
+    height: 25rem;
     padding: 0;
     margin: 0;
     z-index: 0;
@@ -654,8 +654,8 @@ button{
 
 .voluntariado-hojas-imagen{
     position: absolute;
-    width: inherit;
-    height: 240px;
+    width: 100%;
+    height: 25rem;
 }
 
 .voluntariado-contenido{
@@ -670,14 +670,14 @@ button{
 
 .voluntariado-titulo{
     font-family: "Kanit", sans-serif;
-    color: #00203a;
+    color: white;
 }
 
 .voluntariado-descripcion{
     font-family: "Manrope", sans-serif;
     margin: 15px 0;
     font-weight: bold;
-    color: #00203a;
+    color: white;
 }
 
 .voluntariado-boton{
@@ -1630,6 +1630,11 @@ overflow-y: auto;
 
     .voluntariado-descripcion{
         margin: 0;
+    }
+
+    .voluntariado-hojas-imagen{
+        /* background: url('../img/voluntariado-fondo.png'); */
+        src: url('../img/voluntariado-img-hojas.png');
     }
 
     .contacto-datos-container{
