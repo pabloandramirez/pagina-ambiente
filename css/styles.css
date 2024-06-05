@@ -559,7 +559,7 @@ button{
     line-height: 2;
 }
 .categoria-input {
-    width: 150px; /* Ancho del input */
+    width: 19rem; /* Ancho del input */
     height: 40px; /* Altura del input */
     border: 2px solid #ccc; /* Grosor y color del borde */
     border-radius: 20px; /* Radio de borde para hacerlo redondeado */

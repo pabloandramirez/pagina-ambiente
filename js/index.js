@@ -59,6 +59,7 @@ async function cargarNoticias() {
   })
   .catch(error => {
       console.error('Hubo un error al obtener los datos:', error);
+      setInterval(cargarNoticias, 60000);
   });
 
   return Promise.resolve();
