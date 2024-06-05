@@ -522,6 +522,26 @@ button{
     line-height: 2;
 }
 
+#resultados-normativas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin: 0 5rem;
+}
+
+.enlace-normativa{
+    color: white; 
+    margin: 10px 20px;
+    text-decoration: none;
+    font-family: "Manrope", sans-serif;
+    width: 6rem;
+}
+
+.enlace-normativa:hover{
+    color: #f26df9;
+}
+
 .busqueda-container{
     margin: 30px 150px;
 }

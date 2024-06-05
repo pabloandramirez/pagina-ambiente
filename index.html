@@ -397,21 +397,21 @@
             <div class="formularios-container">
                 <div class="categoria-container">
                     <h3 class="categoria-titulo">CATEGORIA</h3>
-                    <select id="select-opciones" class="categoria-input">
-                        <option value="todos">Todas</option>
-                        <option value="arprobio">Protección Ecológica</option>
-                        <option value="fiscacontamb">Fiscalización y Control Ambiental</option>
-                        <option value="polincentambi">Desarrollo Sostenible</option>
-                        <option value="tecnamb">Herramientas Ambientales</option>
-                    </select>
+                    <form id="buscar-por-direccion" action="">
+                        <select id="select-opciones" class="categoria-input">
+                            <option value="">Todas</option>
+                            <option value="politica e incentivos ambientales">Política e Incentivos Ambientales</option>
+                            <option value="fiscalizacion y control ambiental">Fiscalización y Control Ambiental</option>
+                            <option value="areas protegidas y biodiversidad">Areas Protegidas y Biodiversidad</option>
+                            <option value="cambio climatico y riesgo ambiental">Cambio Climático y Riesgo Ambiental</option>
+                        </select>
+                        <button id="btn-buscar-normativas" class="boton-buscar" type="submit">BUSCAR</button>
+                    </form>
                 </div>
-                <form class="palabra-clave-container" action="/buscar-normativas.html" method="get">
-                    <h3 class="palabra-clave-titulo">BUSCA POR PALABRA CLAVE</h3>
-                    <input type="hidden" name="categoria" id="input-categoria">
-                    <input class="palabra-clave-input" type="text" placeholder="Palabra" style="font-style: italic;" name="palabra">
-                    <button class="boton-buscar" type="submit">BUSCAR</button>
-                </form>
             </div>
+        </div>
+        <!--PDF Resultados-->
+        <div id="resultados-normativas">
         </div>
     </div>
     <!-- <div class="tramites-container" id="tramites">
