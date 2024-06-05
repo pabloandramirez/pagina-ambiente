@@ -171,6 +171,7 @@ async function todasLasNoticias() {
             paginadoList.appendChild(newPageItem);
             paginadoList.insertBefore(newPageItem, nextPageBtn.parentNode);
         }
+        updatePagination();
     } catch (error) {
         console.error('No se cargaron todas las noticias:', error);
     }

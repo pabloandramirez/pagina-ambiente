@@ -802,6 +802,7 @@ button{
   max-height: 100px; /* Establece una altura máxima */
   overflow: hidden; /* Oculta el contenido que se desborde */
   height: 4rem;
+  text-align: center;
 }
 
 .pie-noticia{
@@ -1473,6 +1474,7 @@ overflow-y: auto;
 
     .hamburger {
         display: block;
+        line-height: 0;
     }
 
     .p-3{

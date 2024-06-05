@@ -231,6 +231,7 @@ nav{
     border-color: var(--bs-pagination-disabled-border-color);
   }
   .page-item:not(:first-child) .page-link {
+    border-radius: 10px;
     margin-left: calc(var(--bs-border-width) * -1);
   }
   .page-item:first-child .page-link {

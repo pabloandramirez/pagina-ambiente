@@ -9,7 +9,6 @@ async function cargarNoticias() {
     await fetch('http://127.0.0.1:8080/noticia/')
     .then(response => response.json())
     .then(data => {
-      console.log('muestra cargando');
       mostrarCargando();
       // Filtrar los primeros 4 resultados
       const primerosResultados = data.slice(0, 4);
@@ -55,7 +54,6 @@ async function cargarNoticias() {
 
       });
       ocultarCargando();
-      console.log('oculta cargando');
   })
   .catch(error => {
       console.error('Hubo un error al obtener los datos:', error);
@@ -166,8 +164,6 @@ document.getElementById("understood-btn").addEventListener("click", function(eve
         telefono: formData.get('telefono'),
         mensaje: formData.get('mensaje')
       };
-
-      console.log(formDataJSON);
 
       fetch("http://127.0.0.1:8080/contacto", {
           method: "POST",
