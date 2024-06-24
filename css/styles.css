@@ -197,6 +197,14 @@ body{
     height: 70px;
 }
 
+.imagen-ambiente{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
 .titulo-y-logo{
     display: inline-flex;
     margin-left: 12%;
