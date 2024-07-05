@@ -1,4 +1,4 @@
-# Sitio Web desarrollado para presentar como proyecto de página de la Subsecretaría de Ambiente de la Provincia del Chaco 🌿
+# Sitio Web desarrollado para presentar como proyecto de página de la Subsecretaría de Ambiente de la Provincia del Chaco 🌿, en su presentacion de Escritorio 🖥️ y con su responsividad para dispositivos Moviles 📱
 
 _Primer proyecto presentado de forma profesional como desarrollador_
 
