@@ -181,7 +181,7 @@ document.getElementById("understood-btn").addEventListener("click", function(eve
               // Mostrar la ventana modal de confirmación
               setTimeout(function() {
                 window.location.reload();
-              }, 3000); // ajusta el tiempo según sea necesario
+              }, 3000000000); // ajusta el tiempo según sea necesario
           } else {
               // Manejar el caso de error
               throw new Error('Hubo un problema al enviar el formulario.');
